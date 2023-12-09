@@ -26,7 +26,6 @@ public class Player {
         this.monsters = monsters;
         this.monsterIterator = monsters.iterator();
         this.monsters.forEach(monster -> monster.setPlayer(this));
-
     }
 
     public void nextRound() {

@@ -22,8 +22,10 @@ public class IceBeast extends Monster {
     }
 
     @Override
-    public void attack(Monster monster) {
-        monster.onDamageReceive(this.activeSkill.damage(monster), this);
+    public void attack(Monster enemy) {
+        int damage = this.activeSkill.damage(enemy);
+        System.out.println("--     ["+ this +"] ataca a [" + enemy + "] haciendole " + damage + " de daño");
+        enemy.onDamageReceive(damage, this);
     }
 
     @Override

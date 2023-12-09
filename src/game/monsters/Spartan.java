@@ -3,7 +3,6 @@ package game.monsters;
 import game.attacks.Slice;
 import game.components.Monster;
 import game.types.Type;
-
 import java.util.Arrays;
 
 public class Spartan extends Monster {
