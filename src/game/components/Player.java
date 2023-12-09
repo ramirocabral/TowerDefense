@@ -28,6 +28,10 @@ public class Player {
         this.monsters.forEach(monster -> monster.setPlayer(this));
     }
 
+    public List<Monster> getMonsters(){
+        return this.monsters;
+    }
+
     public void nextRound() {
         this.castle.nextRound(id, monsterIterator);
     }

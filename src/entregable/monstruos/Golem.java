@@ -20,7 +20,7 @@ public class Golem extends Monster{
         this.activeSkill = new Flamethrower();
         this.monsterName = name;
         this.types = Arrays.asList(Type.FIRE);
-        this.movement_enabled = true;
+        this.movement_enabled = false;
         }
 
         @Override

@@ -1,6 +1,7 @@
 package game.components;
 
 import game.random.RandomGenerator;
+import javax.swing.*;
 
 public class RumbleGame {
 
@@ -113,9 +114,23 @@ public class RumbleGame {
         if(round == 100) {
             loopGame = false;
         }
+//        if (!checkMonsters())
+//            throw new GameDrawException("empate");
     }
 
-    public void startGame() {
+    public boolean checkMonsters(){
+        for (Monster m : playerOne.getMonsters() ) {
+            if (m.getLife() != 0)
+                return false;
+        }
+        for (Monster m : playerTwo.getMonsters() ) {
+            if (m.getLife() != 0)
+                return false;
+        }
+        return true;
+    }
+
+    public void startGame(){
         while(loopGame) {
             try {
                 Thread.sleep(1500);

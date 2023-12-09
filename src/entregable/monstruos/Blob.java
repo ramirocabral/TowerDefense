@@ -10,7 +10,7 @@ import game.types.Type;
 import java.util.Arrays;
 import java.util.List;
 
-public class Blob<T> extends Monster{
+public class Blob extends Monster{
 
     private List<Attack> skills = Arrays.asList(new VenomousSpit(), new ToxinSplash());
 

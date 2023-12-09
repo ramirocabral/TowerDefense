@@ -3,7 +3,7 @@ package game.types;
 public enum Type {
     SWORD,
     DEMON,
-    ARROW,
+    PSYCHIC,
     FIRE,
     COLD,
     BEAST,

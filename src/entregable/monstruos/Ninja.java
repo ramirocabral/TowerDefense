@@ -12,7 +12,7 @@ public class Ninja extends Monster {
         this.life = 500;
         this.activeSkill = new TsunamiKick();
         this.monsterName = name;
-        this.types = Arrays.asList(Type.WATER,Type.WATER);
+        this.types = Arrays.asList(Type.WATER);
     }
 
     @Override
