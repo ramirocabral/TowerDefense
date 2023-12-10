@@ -2,6 +2,8 @@ package game.components;
 
 import game.random.RandomGenerator;
 import javax.swing.*;
+import java.util.Iterator;
+
 
 public class RumbleGame {
 
@@ -50,6 +52,7 @@ public class RumbleGame {
         segundaEvaluacionUI = new SegundaEvaluacionUI();
         segundaEvaluacionUI.init().setVisible(true);
 
+
         PathBox box15 = new PathBox(segundaEvaluacionUI.getButton(0), "Noroeste");
         PathBox box27 = new PathBox(segundaEvaluacionUI.getButton(2), "Oeste");
         PathBox box39 = new PathBox(segundaEvaluacionUI.getButton(4), "Suroeste");
@@ -88,7 +91,8 @@ public class RumbleGame {
         castleTwo.setLifeLabel(segundaEvaluacionUI.getVidasPlayerTwoLabel());
     }
 
-    public void nextRound() {
+
+    public void nextRound() throws GameDrawException {
         System.out.println();
         System.out.println();
         System.out.println("Siguiente Ronda numero: " + round);
@@ -106,6 +110,7 @@ public class RumbleGame {
         if(playerOne.getCastle().getCastleLife() <= 0) {
             System.out.println("****         Ganador el Jugador Azul!!!         ****");
             loopGame = false;
+
         }
         if(playerTwo.getCastle().getCastleLife() <= 0) {
             System.out.println("****         Ganador el Jugador Rojo!!!         ****");
@@ -114,33 +119,42 @@ public class RumbleGame {
         if(round == 100) {
             loopGame = false;
         }
-//        if (!checkMonsters())
-//            throw new GameDrawException("empate");
+        if (loopGame && checkMonsters()) {
+            throw new GameDrawException("Empate");
+        }
     }
 
-    public boolean checkMonsters(){
-        for (Monster m : playerOne.getMonsters() ) {
-            if (m.getLife() != 0)
+    public boolean checkMonsters() {
+        Castle castle1 = playerOne.getCastle();
+        Castle castle2 = playerTwo.getCastle();
+        for (int i = 0; i < 3; i++) {
+            if ((castle1.getWestPath().getPathBoxes().get(i).getMonster() != null )|| (castle1.getEastPath().getPathBoxes().get(i).getMonster() != null)
+            || (castle2.getWestPath().getPathBoxes().get(i).getMonster() != null) || (castle2.getEastPath().getPathBoxes().get(i).getMonster() != null)) {
                 return false;
-        }
-        for (Monster m : playerTwo.getMonsters() ) {
-            if (m.getLife() != 0)
-                return false;
+            }
         }
         return true;
     }
 
-    public void startGame(){
+    public void startGame() throws GameDrawException {
         while(loopGame) {
             try {
                 Thread.sleep(1500);
                 this.nextRound();
-            } catch (InterruptedException e) {
+            }
+            catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
         }
-        //TODO: Colocar una ventana modal con un mensaje que indique el resultado
 
-        System.exit(0);
+        // Display result message on the GUI on the Event Dispatch Thread
+        String resultMessage = "EMPATE";
+        if (getPlayerOne().getCastle().getLife() == 0){
+            resultMessage = "Gana el Jugador azul";
+        }
+        else if (getPlayerTwo().getCastle().getLife() == 0) {
+            resultMessage = "Gana el Jugador rojo";
+        }
+        segundaEvaluacionUI.showResultMessage(resultMessage);
     }
 }

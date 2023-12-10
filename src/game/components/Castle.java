@@ -32,7 +32,7 @@ public class Castle {
         }
         westPath.update();
         eastPath.update();
-        lifeLabel.setText("Vidas: " + this.castleLife);
+        lifeLabel.setText("Vida: " + this.castleLife);
     }
 
     public void setCastleLife(Integer castleLife) {
@@ -59,9 +59,7 @@ public class Castle {
         return this.castleLife;
     }
 
-    public void setLife(int life) {
-        this.castleLife = life;
-    }
+    public void setLife(int life) {this.castleLife = life;}
 
     public void setLifeLabel(JLabel lifeLabel) {
         this.lifeLabel = lifeLabel;

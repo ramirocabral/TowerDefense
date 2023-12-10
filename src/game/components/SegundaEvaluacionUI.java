@@ -114,4 +114,8 @@ public class SegundaEvaluacionUI extends JFrame {
             panelList.add(panel);
         }
     }
+
+    public void showResultMessage(String message) {
+        JOptionPane.showMessageDialog(this, message, "Resultado", JOptionPane.INFORMATION_MESSAGE);
+    }
 }

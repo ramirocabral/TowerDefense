@@ -1,4 +1,5 @@
 import entregable.Comparators.*;
+import game.components.GameDrawException;
 import game.components.Monster;
 import game.components.RumbleGame;
 import game.monsters.*;
@@ -7,6 +8,10 @@ import java.util.Collections;
 import java.util.List;
 import entregable.monstruos.*;
 
+import static java.lang.Thread.sleep;
+
+import static java.lang.System.exit;
+
 
 public class Main {
     public static void main(String[] args) {
@@ -14,25 +19,32 @@ public class Main {
         rumbleGame.init();
 
         List<Monster> monstersOne = Arrays.asList(new HolyKnight("HolyKnight"),
-                new Blob("Blob"),
-                new ElectroBOOM("ElectroBOOM"),
-                new HolyKnight("HolyKnight2"));
+         new HolyKnight("MATEO AYUDAME LOCOOOO"));
 
-        Collections.sort(monstersOne, new NumberOfTypesComparator());
-
-        //TODO ordenar el listado de monstruos que recibe el jugador uno
         rumbleGame.getPlayerOne().setMonsters(monstersOne);
 
-        List<Monster> monstersTwo = Arrays.asList(new Spartan("spartan"),
-                new Ninja("Ninja"),
-                new Golem("Golem"),
-                new EvilBeast("EvilBeast"));
+        List<Monster> monstersTwo = Arrays.asList(new Spartan("spartan"));
 
         Collections.sort(monstersTwo, new NumberOfTypesComparator());
 
-        //TODO ordenar el listado de monstruos que recibe el jugador dos
-        rumbleGame.getPlayerTwo().setMonsters(monstersTwo);
 
-        rumbleGame.startGame();
+        rumbleGame.getPlayerTwo().setMonsters(monstersTwo);
+        try {
+            rumbleGame.startGame();
+        }catch (GameDrawException e){
+            System.out.println("MANU TARADO!!!!!");
+            exit(0);
+            try {
+                sleep(1500);
+            } catch (InterruptedException interruptedException) {
+                interruptedException.printStackTrace();
+            }
+        }
+
+        try{Thread.sleep(5000);}
+        catch (InterruptedException e){
+            e.printStackTrace();
+        }
+        exit(0);
     }
 }
