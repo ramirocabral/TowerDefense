@@ -32,8 +32,7 @@ public class Main {
         try {
             rumbleGame.startGame();
         }catch (GameDrawException e){
-            System.out.println("MANU TARADO!!!!!");
-            exit(0);
+            System.exit(0);
             try {
                 sleep(1500);
             } catch (InterruptedException interruptedException) {
@@ -45,6 +44,6 @@ public class Main {
         catch (InterruptedException e){
             e.printStackTrace();
         }
-        exit(0);
+        System.exit(0);
     }
 }

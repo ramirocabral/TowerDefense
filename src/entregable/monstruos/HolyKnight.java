@@ -16,7 +16,7 @@ public class HolyKnight extends Monster {
     private List<Attack> skills = Arrays.asList(new Slice(), new HolyLight());
 
     public HolyKnight(String name) {
-        this.life = 500;
+        this.life = 510;
         this.activeSkill = skills.get(0);
         this.monsterName = name;
         this.types = Arrays.asList(Type.SWORD,Type.RADIANT);

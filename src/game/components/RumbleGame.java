@@ -120,6 +120,7 @@ public class RumbleGame {
             loopGame = false;
         }
         if (loopGame && checkMonsters()) {
+            segundaEvaluacionUI.showResultMessage("EMPATE");
             throw new GameDrawException("Empate");
         }
     }
@@ -148,7 +149,7 @@ public class RumbleGame {
         }
 
         // Display result message on the GUI on the Event Dispatch Thread
-        String resultMessage = "EMPATE";
+        String resultMessage = "";
         if (getPlayerOne().getCastle().getLife() == 0){
             resultMessage = "Gana el Jugador azul";
         }
@@ -156,5 +157,6 @@ public class RumbleGame {
             resultMessage = "Gana el Jugador rojo";
         }
         segundaEvaluacionUI.showResultMessage(resultMessage);
+        System.exit(0);
     }
 }
