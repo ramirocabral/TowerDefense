@@ -3,6 +3,7 @@ package game.components;
 import game.random.RandomGenerator;
 import javax.swing.*;
 import java.util.Iterator;
+import entregable.Result;
 
 
 public class RumbleGame {
@@ -13,6 +14,8 @@ public class RumbleGame {
     private boolean loopGame = true;
     private int round = 0;
     private SegundaEvaluacionUI segundaEvaluacionUI;
+
+    private Result resultUI;
 
     public static RumbleGame getInstance() {
         return instance;
@@ -48,6 +51,9 @@ public class RumbleGame {
 
         playerOne.setCastle(castleOne);
         playerTwo.setCastle(castleTwo);
+
+
+        resultUI = new Result();
 
         segundaEvaluacionUI = new SegundaEvaluacionUI();
         segundaEvaluacionUI.init().setVisible(true);
@@ -119,22 +125,20 @@ public class RumbleGame {
         if(round == 100) {
             loopGame = false;
         }
-        if (loopGame && checkMonsters()) {
-            segundaEvaluacionUI.showResultMessage("EMPATE");
+        if (loopGame && !checkMonsters()) {
+            resultUI.showResult(playerOne.getCastle().getLife(), playerTwo.getCastle().getLife(), round);
+            //segundaEvaluacionUI.showResultMessage("EMPATE");
             throw new GameDrawException("Empate");
         }
     }
 
     public boolean checkMonsters() {
-        Castle castle1 = playerOne.getCastle();
-        Castle castle2 = playerTwo.getCastle();
-        for (int i = 0; i < 3; i++) {
-            if ((castle1.getWestPath().getPathBoxes().get(i).getMonster() != null )|| (castle1.getEastPath().getPathBoxes().get(i).getMonster() != null)
-            || (castle2.getWestPath().getPathBoxes().get(i).getMonster() != null) || (castle2.getEastPath().getPathBoxes().get(i).getMonster() != null)) {
-                return false;
-            }
-        }
-        return true;
+        Path westPlayerOne = playerOne.getCastle().getWestPath();
+        Path eastPlayerOne = playerOne.getCastle().getEastPath();
+        Path westPlayerTwo = playerTwo.getCastle().getWestPath();
+        Path eastPlayerTwo = playerTwo.getCastle().getEastPath();
+        return (playerOne.hasNextMonster() || playerTwo.hasNextMonster() || (westPlayerOne.haveMonster(playerOne.getId()) || eastPlayerOne.haveMonster(playerOne.getId())
+        || westPlayerTwo.haveMonster(playerTwo.getId()) || eastPlayerTwo.haveMonster(playerTwo.getId())));
     }
 
     public void startGame() throws GameDrawException {
@@ -147,16 +151,14 @@ public class RumbleGame {
                 throw new RuntimeException(e);
             }
         }
-
-        // Display result message on the GUI on the Event Dispatch Thread
-        String resultMessage = "";
-        if (getPlayerOne().getCastle().getLife() == 0){
-            resultMessage = "Gana el Jugador azul";
+        //mostrar resultado
+        try{
+            resultUI.showResult(playerOne.getCastle().getLife(), playerTwo.getCastle().getLife(), round);
+            Thread.sleep(10000);
         }
-        else if (getPlayerTwo().getCastle().getLife() == 0) {
-            resultMessage = "Gana el Jugador rojo";
+        catch(InterruptedException e){
+            throw new RuntimeException(e);
         }
-        segundaEvaluacionUI.showResultMessage(resultMessage);
         System.exit(0);
     }
 }

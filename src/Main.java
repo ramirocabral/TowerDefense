@@ -19,7 +19,9 @@ public class Main {
         rumbleGame.init();
 
         List<Monster> monstersOne = Arrays.asList(new HolyKnight("HolyKnight"),
-         new HolyKnight("MATEO AYUDAME LOCOOOO"));
+            new HolyKnight("HolyKnight"),
+            new HolyKnight("HolyKnight"),
+            new HolyKnight("HolyKnight"));
 
         rumbleGame.getPlayerOne().setMonsters(monstersOne);
 

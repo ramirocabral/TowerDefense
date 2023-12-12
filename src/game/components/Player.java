@@ -40,4 +40,8 @@ public class Player {
         return id;
     }
 
+    public boolean hasNextMonster(){
+        return this.monsterIterator.hasNext();
+    }
+
 }

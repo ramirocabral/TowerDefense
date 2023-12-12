@@ -39,4 +39,14 @@ public class Golem extends Monster{
         } else {
              movement_enabled = true;        }
     }
+    @Override
+    public void onDamageReceive(Integer damage, Monster monster) {
+        this.life = this.life - damage;
+        if(this.life < 0) {
+            this.life = 0;
+            this.activeSkill = new ColdBreath();
+            attack(monster);
+        }
+        System.out.println(this + " fue herido, queda con " + this.life + " puntos de vida");
+    }
 }
