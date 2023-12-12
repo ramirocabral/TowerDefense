@@ -12,6 +12,8 @@ public abstract class Monster {
     private Player player;
     protected String monsterName;
     protected List<Type> types;
+    private int minDamage;
+    private int maxDamage;
 
     public abstract void attack(Monster monster);
 
@@ -47,6 +49,10 @@ public abstract class Monster {
     @Override
     public String toString() {
         return monsterName;
+    }
+
+    public int getAverageDamage(){
+        return ((this.activeSkill.getMaxDamage() + this.activeSkill.getMinDamage())/2);
     }
 
 }

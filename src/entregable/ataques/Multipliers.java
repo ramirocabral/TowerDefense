@@ -8,7 +8,7 @@ import java.util.Map;
 
 
 public enum Multipliers {
-    //    SWORD(),
+    SWORD(initialize(Type.BEAST, 1.5)),
     DEMON (initialize( Type.FIRE, 1.5, Type.COLD, 1.5, Type.WATER, 1.5, Type.ELECTRIC, 1.5)),
     PSYCHIC(initialize(Type.SWORD, 1.5, Type.RADIANT, 1.5,Type.BEAST, 0.5)),
     FIRE(initialize(Type.COLD, 2.0, Type.BEAST, 2.0)),
@@ -40,4 +40,5 @@ public enum Multipliers {
             return 1.0;
         return mult.get(type);
     }
+
 }

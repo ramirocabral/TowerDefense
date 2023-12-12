@@ -28,7 +28,7 @@ public class HolyKnight extends Monster {
             this.activeSkill = skills.get(1);
         }
         int damage = this.activeSkill.damage(enemy);
-        System.out.println("--     ["+ this +"] ataca a [" + enemy + "] haciendole " + damage + " de daño");
+        System.out.println("--     ["+ this +"] ataca a [" + enemy + "] con  ["+this.activeSkill.getClass()+ "]  haciendole " + damage + " de daño");
         enemy.onDamageReceive(damage, this);
         this.activeSkill = skills.get(0);
     }

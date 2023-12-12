@@ -8,4 +8,12 @@ public class Curse implements Demon {
     public int damage(Monster monster) {
         return 500;
     }
+    @Override
+    public int getMinDamage(){
+        return 500;
+    }
+    @Override
+    public int getMaxDamage(){
+        return 500;
+    }
 }

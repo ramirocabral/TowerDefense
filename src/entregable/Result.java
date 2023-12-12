@@ -8,11 +8,7 @@ import java.awt.event.ActionListener;
 public class Result extends JFrame {
 
 
-    public Result() {
-
-    }
-
-    public void showResult(int castleRedLife, int castleBlueLife, int rounds) {
+    public Result(int castleRedLife, int castleBlueLife, int rounds) {
         setTitle("Fin del juego");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         int width = 500, height = 250;
@@ -29,11 +25,25 @@ public class Result extends JFrame {
         titleLabel.setFont(new Font("Montserrat", Font.BOLD, 24));
         titleLabel.setBounds(width / 2 - 90, 10, 500, 50);
 
+        //ExitButton
+
+        JButton exitButton = new JButton("Salir");
+        exitButton.setBounds(210, 170, 80, 30);
+        exitButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                System.exit(0); // Sale de la aplicación
+            }
+        });
+
+        add(exitButton);
+
+
         //Rondas
 
         JLabel roundsLabel = new JLabel("Rondas: " + rounds);
         roundsLabel.setFont(new Font("Montserrat", Font.BOLD, 14));
         roundsLabel.setBounds(290, 170, 300, 40);
+
 
         //Resultado
 
@@ -87,20 +97,19 @@ public class Result extends JFrame {
         JLabel castleImageLabel = new JLabel(castleImage);
         castleImageLabel.setBounds(40, 50, 128, 148);
 
+
+
         setLayout(null);
-        add(titleLabel);
         add(resultLabel);
         add(castleImageLabel);
         add(roundsLabel);
-
         setLocationRelativeTo(null);
-        setVisible(true);
     }
 
 
-    public static void main (String[] args){
-        Result result = new Result();
-        result.showResult(0, 1, 20);
+    //public static void main (String[] args){
+    //    Result result = new Result();
+
         //System.exit(0);
-    }
+    //}
 }

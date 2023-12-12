@@ -12,7 +12,7 @@ public class EvilBeast extends Monster {
         this.life = 700;
         this.monsterName = name;
         this.activeSkill = new Curse();
-        this.types = Arrays.asList(Type.BEAST, Type.DEMON, Type.FIRE);
+        this.types = Arrays.asList(Type.DEMON, Type.BEAST, Type.FIRE);
     }
 
     @Override

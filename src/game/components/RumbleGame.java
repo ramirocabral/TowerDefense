@@ -1,8 +1,6 @@
 package game.components;
 
 import game.random.RandomGenerator;
-import javax.swing.*;
-import java.util.Iterator;
 import entregable.Result;
 
 
@@ -53,7 +51,6 @@ public class RumbleGame {
         playerTwo.setCastle(castleTwo);
 
 
-        resultUI = new Result();
 
         segundaEvaluacionUI = new SegundaEvaluacionUI();
         segundaEvaluacionUI.init().setVisible(true);
@@ -98,7 +95,7 @@ public class RumbleGame {
     }
 
 
-    public void nextRound() throws GameDrawException {
+    public void nextRound() throws TieException {
         System.out.println();
         System.out.println();
         System.out.println("Siguiente Ronda numero: " + round);
@@ -126,9 +123,8 @@ public class RumbleGame {
             loopGame = false;
         }
         if (loopGame && !checkMonsters()) {
-            resultUI.showResult(playerOne.getCastle().getLife(), playerTwo.getCastle().getLife(), round);
-            //segundaEvaluacionUI.showResultMessage("EMPATE");
-            throw new GameDrawException("Empate");
+            loopGame = false;
+            throw new TieException("la concha de tu madre allboys");
         }
     }
 
@@ -141,24 +137,25 @@ public class RumbleGame {
         || westPlayerTwo.haveMonster(playerTwo.getId()) || eastPlayerTwo.haveMonster(playerTwo.getId())));
     }
 
-    public void startGame() throws GameDrawException {
+    public void startGame() throws TieException {
         while(loopGame) {
             try {
-                Thread.sleep(1500);
+                Thread.sleep(150);
                 this.nextRound();
             }
             catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
+            catch(TieException e) {
+                break;
+            }
         }
+
+        //Esperar respuesta
+
         //mostrar resultado
-        try{
-            resultUI.showResult(playerOne.getCastle().getLife(), playerTwo.getCastle().getLife(), round);
-            Thread.sleep(10000);
-        }
-        catch(InterruptedException e){
-            throw new RuntimeException(e);
-        }
-        System.exit(0);
+
+        Result resultUI = new Result(playerOne.getCastle().getLife(), playerTwo.getCastle().getLife(), round);
+        resultUI.setVisible(true);
     }
 }
