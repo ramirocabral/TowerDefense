@@ -1,16 +1,21 @@
 package entregable.monstruos;
-import entregable.ataques.Water.TsunamiKick;
+import entregable.ataques.Electric.Discharge;
+import entregable.ataques.Water.KangarooKick;
+import entregable.ataques.Water.TsunamiPunch;
 import game.components.Monster;
+import game.components.PathBox;
 import game.random.RandomGenerator;
+import game.attacks.Attack;
 import game.types.Type;
 import java.util.Arrays;
-
+import java.util.List;
 
 
 public class Ninja extends Monster {
+    private List<Attack> skills = Arrays.asList(new TsunamiPunch() , new KangarooKick());
     public Ninja(String name) {
         this.life = 500;
-        this.activeSkill = new TsunamiKick();
+        this.activeSkill = skills.get(0);
         this.monsterName = name;
         this.types = Arrays.asList(Type.WATER);
     }
@@ -34,4 +39,16 @@ public class Ninja extends Monster {
         }
         System.out.println(this + " fue herido, queda con " + this.life + " puntos de vida");
     }
+
+    //rotamos las habilidades
+    @Override
+    public void move(PathBox oldPathBox, PathBox newPathBox) {
+        super.move(oldPathBox, newPathBox);
+        if(activeSkill instanceof TsunamiPunch) {
+            this.activeSkill = skills.get(1);
+        } else {
+            this.activeSkill = skills.get(0);
+        }
+    }
+
 }

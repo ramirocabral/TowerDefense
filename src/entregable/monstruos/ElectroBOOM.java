@@ -9,7 +9,6 @@ import java.util.Arrays;
 import java.util.List;
 
 
-
 public class ElectroBOOM extends Monster{
     private List<Attack> skills = Arrays.asList(new Discharge() , new Thunderstrike());
 
@@ -18,8 +17,8 @@ public class ElectroBOOM extends Monster{
         this.activeSkill = skills.get(0);
         this.monsterName = name;
         this.types = Arrays.asList(Type.ELECTRIC);
-
     }
+
     @Override
     public void attack(Monster enemy) {
         int damage = this.activeSkill.damage(enemy);
@@ -37,5 +36,4 @@ public class ElectroBOOM extends Monster{
             this.activeSkill = skills.get(0);
         }
     }
-
 }

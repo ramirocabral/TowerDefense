@@ -27,6 +27,10 @@ public class RumbleGame {
         return playerTwo;
     }
 
+    public int getRound(){
+        return this.round;
+    }
+
     private RumbleGame() {
 
     }
@@ -140,7 +144,7 @@ public class RumbleGame {
     public void startGame() throws TieException {
         while(loopGame) {
             try {
-                Thread.sleep(150);
+                Thread.sleep(5000);
                 this.nextRound();
             }
             catch (InterruptedException e) {
@@ -151,11 +155,9 @@ public class RumbleGame {
             }
         }
 
-        //Esperar respuesta
+        //movido al Main, para mejorar el encapsulamiento
 
-        //mostrar resultado
-
-        Result resultUI = new Result(playerOne.getCastle().getLife(), playerTwo.getCastle().getLife(), round);
-        resultUI.setVisible(true);
+//        Result resultUI = new Result(playerOne.getCastle().getLife(), playerTwo.getCastle().getLife(), round);
+//        resultUI.setVisible(true);
     }
 }

@@ -16,7 +16,7 @@ public class HolyKnight extends Monster {
     private List<Attack> skills = Arrays.asList(new Slice(), new HolyLight());
 
     public HolyKnight(String name) {
-        this.life = 510;
+        this.life = 570;
         this.activeSkill = skills.get(0);
         this.monsterName = name;
         this.types = Arrays.asList(Type.SWORD,Type.RADIANT);
@@ -28,7 +28,7 @@ public class HolyKnight extends Monster {
             this.activeSkill = skills.get(1);
         }
         int damage = this.activeSkill.damage(enemy);
-        System.out.println("--     ["+ this +"] ataca a [" + enemy + "] con  ["+this.activeSkill.getClass()+ "]  haciendole " + damage + " de daño");
+        System.out.println("--     ["+ this +"] ataca a [" + enemy + "]  haciendole " + damage + " de daño");
         enemy.onDamageReceive(damage, this);
         this.activeSkill = skills.get(0);
     }
