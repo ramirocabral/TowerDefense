@@ -5,6 +5,9 @@ import game.components.Monster;
 import game.attacks.Attack;
 import game.components.PathBox;
 import game.types.Type;
+
+import javax.swing.*;
+import java.awt.*;
 import java.util.Arrays;
 import java.util.List;
 
@@ -17,6 +20,7 @@ public class ElectroBOOM extends Monster{
         this.activeSkill = skills.get(0);
         this.monsterName = name;
         this.types = Arrays.asList(Type.ELECTRIC);
+        this.image = new ImageIcon("assets/monsters/wizard.png");
     }
 
     @Override

@@ -7,6 +7,7 @@ import game.components.PathBox;
 import game.attacks.Cold;
 import game.types.Type;
 
+import javax.swing.*;
 import java.util.Arrays;
 import java.util.List;
 
@@ -19,6 +20,7 @@ public class IceBeast extends Monster {
         this.monsterName = name;
         this.activeSkill = skills.get(0);
         this.types = Arrays.asList(Type.COLD, Type.BEAST);
+        this.image = new ImageIcon("assets/monsters/iceBeast.png");
     }
 
     @Override

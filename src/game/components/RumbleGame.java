@@ -81,6 +81,8 @@ public class RumbleGame {
         PathBox box29 = new PathBox(segundaEvaluacionUI.getButton(3), "Este");
         PathBox box41 = new PathBox(segundaEvaluacionUI.getButton(5), "Sureste");
 
+        //TODO: arreglar el tema de las vidas
+
         box17.setNorthBox(null);
         box17.setSouthBox(box29);
 
@@ -96,6 +98,8 @@ public class RumbleGame {
 
         castleOne.setLifeLabel(segundaEvaluacionUI.getVidasPlayerOneLabel());
         castleTwo.setLifeLabel(segundaEvaluacionUI.getVidasPlayerTwoLabel());
+
+        //
     }
 
 
@@ -144,7 +148,7 @@ public class RumbleGame {
     public void startGame() throws TieException {
         while(loopGame) {
             try {
-                Thread.sleep(5000);
+                Thread.sleep(1500);
                 this.nextRound();
             }
             catch (InterruptedException e) {

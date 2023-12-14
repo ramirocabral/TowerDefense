@@ -7,6 +7,7 @@ import game.components.PathBox;
 import game.random.RandomGenerator;
 import game.types.Type;
 
+import javax.swing.*;
 import java.util.Arrays;
 import java.util.List;
 
@@ -19,6 +20,7 @@ public class Blob extends Monster{
         this.activeSkill = skills.get(0);
         this.monsterName = name;
         this.types = Arrays.asList(Type.VENOM);
+        this.image = new ImageIcon("assets/monsters/blob.png");
     }
 
     @Override

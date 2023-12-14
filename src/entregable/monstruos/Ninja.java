@@ -7,6 +7,9 @@ import game.components.PathBox;
 import game.random.RandomGenerator;
 import game.attacks.Attack;
 import game.types.Type;
+
+import javax.swing.*;
+import java.awt.*;
 import java.util.Arrays;
 import java.util.List;
 
@@ -18,6 +21,7 @@ public class Ninja extends Monster {
         this.activeSkill = skills.get(0);
         this.monsterName = name;
         this.types = Arrays.asList(Type.WATER);
+        this.image = new ImageIcon("assets/monsters/ninja.png");
     }
 
     @Override

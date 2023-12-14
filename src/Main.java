@@ -32,7 +32,10 @@ public class Main {
         RumbleGame rumbleGame = RumbleGame.getInstance();
         rumbleGame.init();
 
-        List<Monster> monstersOne = Arrays.asList(new HolyKnight("AgusMurray"));
+        List<Monster> monstersOne = Arrays.asList(
+                new ElectroBOOM("AgusMurray"),
+                new ElectroBOOM("AgusMurray")
+        );
 
         rumbleGame.getPlayerOne().setMonsters(monstersOne);
 
@@ -40,7 +43,8 @@ public class Main {
         new EvilBeast("Vaca"),
                 new EvilBeast("Vaca"),
                 new EvilBeast("Vaca"),
-        new EvilBeast("Vaca"),
+//        new Spartan("Vaca"),
+//        new IceBeast("Vaca"),
         new EvilBeast("Vaca"));
 
         Collections.sort(monstersTwo, new NumberOfTypesComparator());

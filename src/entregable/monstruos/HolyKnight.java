@@ -6,6 +6,9 @@ import game.attacks.Attack;
 import game.attacks.Slice;
 import game.components.PathBox;
 import game.types.Type;
+
+import javax.swing.*;
+import java.awt.*;
 import java.util.Arrays;
 import java.util.List;
 
@@ -20,6 +23,7 @@ public class HolyKnight extends Monster {
         this.activeSkill = skills.get(0);
         this.monsterName = name;
         this.types = Arrays.asList(Type.SWORD,Type.RADIANT);
+        this.image = new ImageIcon("assets/monsters/holyKnight.png");
     }
 
     @Override

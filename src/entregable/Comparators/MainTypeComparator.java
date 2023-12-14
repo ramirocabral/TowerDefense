@@ -4,7 +4,7 @@ import game.components.Monster;
 
 import java.util.Comparator;
 
-public class TypeComparator implements Comparator<Monster> {
+public class MainTypeComparator implements Comparator<Monster> {
     @Override
     //Compara por el tipo principal, el cual suponemos que esta en la primer posicion de la lista de tipos
     public int compare(Monster monster1, Monster monster2) {

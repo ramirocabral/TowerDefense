@@ -3,6 +3,8 @@ package game.components;
 import game.attacks.Attack;
 import game.types.Type;
 
+import javax.swing.*;
+import java.awt.*;
 import java.util.List;
 
 public abstract class Monster {
@@ -14,6 +16,8 @@ public abstract class Monster {
     protected List<Type> types;
     private int minDamage;
     private int maxDamage;
+    protected Icon image;
+
 
     public abstract void attack(Monster monster);
 
@@ -55,4 +59,7 @@ public abstract class Monster {
         return ((this.activeSkill.getMaxDamage() + this.activeSkill.getMinDamage())/2);
     }
 
+    public Icon getImage(){
+        return this.image;
+    }
 }

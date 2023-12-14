@@ -3,6 +3,7 @@ import entregable.ataques.Psychic.*;
 import game.components.Monster;
 import game.types.Type;
 
+import javax.swing.*;
 import java.util.Arrays;
 
 public class Cadabra extends Monster {
@@ -11,6 +12,7 @@ public class Cadabra extends Monster {
         this.activeSkill = new Mindcrush();
         this.monsterName = name;
         this.types = Arrays.asList(Type.PSYCHIC, Type.DEMON);
+        this.image = new ImageIcon("assets/monsters/cadabra.png");
     }
 
     @Override
