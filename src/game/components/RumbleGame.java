@@ -1,6 +1,6 @@
 package game.components;
 
-import entregable.Result;
+import entregable.UI.Result;
 import game.random.RandomGenerator;
 
 

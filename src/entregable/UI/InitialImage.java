@@ -1,4 +1,4 @@
-package entregable;
+package entregable.UI;
 
 import javax.swing.*;
 import java.awt.*;
@@ -6,6 +6,7 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.io.File;
 import java.io.IOException;
+import game.components.Game;
 
 public class InitialImage extends JFrame {
 
@@ -35,8 +36,8 @@ public class InitialImage extends JFrame {
 
         //start button
         JLabel startLabel = createLabel("Start", () -> {
+            Game.game();
             setVisible(false);
-//            Main.game();
         });
 
         startLabel.setBounds(145, 245, 120, 50);

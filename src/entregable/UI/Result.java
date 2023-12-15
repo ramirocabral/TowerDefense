@@ -1,4 +1,4 @@
-package entregable;
+package entregable.UI;
 
 import javax.swing.*;
 import java.awt.*;

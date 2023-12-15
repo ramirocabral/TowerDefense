@@ -23,7 +23,7 @@ public class SegundaEvaluacionUI extends JFrame {
         this.addButtons();
         setContentPane(new BackgroundPanel());
         setTitle("Tower Defense");
-        setSize(750, 1125);
+        setSize(600, 900);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         GridLayout gridLayout = new GridLayout(10,3);
         panelList.forEach(SegundaEvaluacionUI.this::add);
@@ -45,23 +45,21 @@ public class SegundaEvaluacionUI extends JFrame {
 
 
         JLabel button6 = new JLabel();
-        JLabel hp = new JLabel();
-
-        panelList.get(6).setLayout(new BoxLayout(panelList.get(6), BoxLayout.Y_AXIS));
+        panelList.get(6).setLayout(new FlowLayout(FlowLayout.RIGHT));
         panelList.get(6).add(button6);
         button6.setVisible(false);
-        button6.setHorizontalAlignment(SwingConstants.RIGHT);
-        button6.setAlignmentX(Component.RIGHT_ALIGNMENT);
         buttons.add(button6);
+//        button6.setHorizontalAlignment(SwingConstants.RIGHT);
+//        button6.setAlignmentX(Component.RIGHT_ALIGNMENT);
 
-        JProgressBar healthBar = new JProgressBar(0, 500);
-        healthBar.setValue(200);
-        healthBar.setPreferredSize(new Dimension(80, 9));
-        healthBar.setMaximumSize(new Dimension(80, 9));
-        healthBar.setAlignmentX(Component.RIGHT_ALIGNMENT);
+//        JProgressBar healthBar = new JProgressBar(0, 500);
+//        healthBar.setValue(200);
+//        healthBar.setPreferredSize(new Dimension(80, 9));
+//        healthBar.setMaximumSize(new Dimension(80, 9));
+//        healthBar.setAlignmentX(Component.RIGHT_ALIGNMENT);
 //        healthBar.setStringPainted(true);
-        healthBar.setForeground(Color.RED);
-        panelList.get(6).add(healthBar);
+//        healthBar.setForeground(Color.RED);
+//        panelList.get(6).add(healthBar);
        //
 
         JLabel button8 = new JLabel();
@@ -96,9 +94,9 @@ public class SegundaEvaluacionUI extends JFrame {
 
         //borders
 
-        for (JLabel label : buttons) {
-            label.setBorder(BorderFactory.createLineBorder(Color.BLACK));
-        }
+//        for (JLabel label : buttons) {
+//            label.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+//        }
 
         initLifeLabels();
 
@@ -160,7 +158,7 @@ public class SegundaEvaluacionUI extends JFrame {
             JPanel panel = new JPanel();
             panel.setOpaque(true);
             panel.setBackground(new Color(0,0,0,0));
-            panel.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+//            panel.setBorder(BorderFactory.createLineBorder(Color.BLACK));
             panelList.add(panel);
         }
     }
