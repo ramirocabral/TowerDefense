@@ -21,7 +21,7 @@ public class Ninja extends Monster {
         this.activeSkill = skills.get(0);
         this.monsterName = name;
         this.types = Arrays.asList(Type.WATER);
-        this.image = new ImageIcon("assets/monsters/samurai.png");
+        this.image = new ImageIcon("assets/monsters/ninja.png");
     }
 
     @Override

@@ -8,4 +8,5 @@ public interface Attack {
 
     int getMinDamage();
     int getMaxDamage();
+
 }

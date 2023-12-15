@@ -7,13 +7,13 @@ import game.random.RandomGenerator;
 public class TsunamiPunch implements Water{
     @Override
     public int damage(Monster monster) {
-        int damage = RandomGenerator.getInstance().calculateDamage(100, 140);
+        int damage = RandomGenerator.getInstance().calculateDamage(120, 150);
         return (int)(damage* Multipliers.WATER.getMultiplier(monster.getTypes().get(0)));
     }
 
     @Override
-    public int getMinDamage(){ return 100;}
+    public int getMinDamage(){ return 120;}
 
     @Override
-    public int getMaxDamage(){ return 140;}
+    public int getMaxDamage(){ return 150;}
 }

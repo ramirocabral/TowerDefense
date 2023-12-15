@@ -5,15 +5,15 @@ import game.components.Monster;
 import game.types.Type;
 
 
-public class Flamethrower  implements Fire{
+public class Flamethrower implements Fire{
     @Override
     public int damage(Monster monster) {
-        int damage = 100;
+        int damage = 250;
         return (int)(damage* Multipliers.FIRE.getMultiplier(monster.getTypes().get(0)));
     }
 
     @Override
-    public int getMaxDamage() {return 100;}
+    public int getMaxDamage() {return 250;}
     @Override
-    public int getMinDamage(){return 100;}
+    public int getMinDamage(){return 250;}
 }

@@ -6,7 +6,6 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.io.File;
 import java.io.IOException;
-import game.components.Game;
 
 public class InitialImage extends JFrame {
 
@@ -36,7 +35,7 @@ public class InitialImage extends JFrame {
 
         //start button
         JLabel startLabel = createLabel("Start", () -> {
-            Game.game();
+//            Game.game();
             setVisible(false);
         });
 

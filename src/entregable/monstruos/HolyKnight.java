@@ -1,14 +1,12 @@
 package entregable.monstruos;
 import entregable.ataques.Radiant.*;
-import game.attacks.ColdBreath;
 import game.components.Monster;
 import game.attacks.Attack;
 import game.attacks.Slice;
 import game.components.PathBox;
 import game.types.Type;
-
+import game.random.RandomGenerator;
 import javax.swing.*;
-import java.awt.*;
 import java.util.Arrays;
 import java.util.List;
 
@@ -36,5 +34,15 @@ public class HolyKnight extends Monster {
         enemy.onDamageReceive(damage, this);
         this.activeSkill = skills.get(0);
     }
+    @Override
+    public void onDamageReceive(Integer damage, Monster monster) {
+        this.life = this.life - damage;
+        if(this.life < 0) {
+            this.life = 0;
+        }
+        System.out.println(this + " fue herido, queda con " + this.life + " puntos de vida");
+    }
+
+
 
 }

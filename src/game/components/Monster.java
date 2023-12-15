@@ -38,6 +38,10 @@ public abstract class Monster {
         return life;
     }
 
+    public void setLife(int life){
+        this.life = life;
+    }
+
     public Player getPlayer() {
         return player;
     }
@@ -62,4 +66,5 @@ public abstract class Monster {
     public Icon getImage(){
         return this.image;
     }
+
 }

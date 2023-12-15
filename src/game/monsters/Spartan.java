@@ -10,7 +10,7 @@ import java.util.Arrays;
 public class Spartan extends Monster {
 
     public Spartan(String name) {
-        this.life = 500;
+        this.life = 600;
         this.activeSkill = new Slice();
         this.monsterName = name;
         this.types = Arrays.asList(Type.SWORD);

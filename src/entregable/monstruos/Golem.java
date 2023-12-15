@@ -23,7 +23,7 @@ public class Golem extends Monster{
         this.types = Arrays.asList(Type.FIRE);
         this.movement_enabled = false;
         this.image = new ImageIcon("assets/monsters/golem.png");
-        }
+    }
 
         @Override
         public void attack(Monster enemy) {

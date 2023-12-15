@@ -19,6 +19,14 @@ public class Path {
         return pathBoxes.stream().anyMatch( pathBox -> pathBox.getMonster() != null && pathBox.getMonster().getPlayer().getId().equals(playerId) );
     }
 
+    public Monster getMonster(Long playerID){
+        for (PathBox box : pathBoxes) {
+            if (box.getMonster() != null && box.getMonster().getPlayer().getId().equals(playerID))
+                return box.getMonster();
+        }
+            return null;
+    }
+
     public void nextRound(Long playerId, Castle castle) {
         Optional<PathBox> occupiedPathBox = pathBoxes.stream().filter(pathBox -> pathBox.getMonster() != null && pathBox.getMonster().getPlayer().getId().equals(playerId)).findFirst();
         //buscamos la casilla ocupada por el monstruo
