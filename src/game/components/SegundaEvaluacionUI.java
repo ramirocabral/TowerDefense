@@ -2,6 +2,8 @@ package game.components;
 
 import javax.swing.*;
 import java.awt.*;
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,11 +18,12 @@ public class SegundaEvaluacionUI extends JFrame {
     private JLabel[] labels2;
 
     public SegundaEvaluacionUI init() {
+        this.setIconImage(new ImageIcon("assets/castleIcon.jpg").getImage());
         this.initPanels();
         this.addButtons();
         setContentPane(new BackgroundPanel());
         setTitle("Tower Defense");
-        setSize(600, 900);
+        setSize(750, 1125);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         GridLayout gridLayout = new GridLayout(10,3);
         panelList.forEach(SegundaEvaluacionUI.this::add);
@@ -35,15 +38,31 @@ public class SegundaEvaluacionUI extends JFrame {
         return buttons.get(index);
     }
 
+    /*
+     Inicializa los espacios para las imagenes de los monsturos en el tablero
+    * */
     private void addButtons() {
 
-        //SETEO DE BOTONES/JLABEL
 
         JLabel button6 = new JLabel();
-        panelList.get(6).setLayout(new FlowLayout(FlowLayout.RIGHT));
+        JLabel hp = new JLabel();
+
+        panelList.get(6).setLayout(new BoxLayout(panelList.get(6), BoxLayout.Y_AXIS));
         panelList.get(6).add(button6);
         button6.setVisible(false);
+        button6.setHorizontalAlignment(SwingConstants.RIGHT);
+        button6.setAlignmentX(Component.RIGHT_ALIGNMENT);
         buttons.add(button6);
+
+        JProgressBar healthBar = new JProgressBar(0, 500);
+        healthBar.setValue(200);
+        healthBar.setPreferredSize(new Dimension(80, 9));
+        healthBar.setMaximumSize(new Dimension(80, 9));
+        healthBar.setAlignmentX(Component.RIGHT_ALIGNMENT);
+//        healthBar.setStringPainted(true);
+        healthBar.setForeground(Color.RED);
+        panelList.get(6).add(healthBar);
+       //
 
         JLabel button8 = new JLabel();
         panelList.get(8).setLayout(new FlowLayout(FlowLayout.LEFT));
@@ -75,6 +94,12 @@ public class SegundaEvaluacionUI extends JFrame {
         button20.setVisible(false);
         buttons.add(button20);
 
+        //borders
+
+        for (JLabel label : buttons) {
+            label.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+        }
+
         initLifeLabels();
 
     }
@@ -83,9 +108,19 @@ public class SegundaEvaluacionUI extends JFrame {
      * Inicializa los labels de las vidas de los castillos
      */
     public void initLifeLabels(){
+        File file = new File("fonts/joystix-monospace.otf");
+        Font customFont;
+        try {
+             customFont = Font.createFont(Font.TRUETYPE_FONT, file).deriveFont(17f);
+        } catch (FontFormatException | IOException e) {
+            throw new RuntimeException(e);
+        }
         ImageIcon imageIcon = new ImageIcon("assets/heart.png");
         JPanel redPanel = panelList.get(0);
-        redPanel.setLayout(new FlowLayout(FlowLayout.CENTER));
+        redPanel.setLayout(new FlowLayout(FlowLayout.LEFT,4,5));
+        JLabel hpLabel1 = new JLabel("Vidas:");
+        hpLabel1.setFont(customFont);
+        redPanel.add(hpLabel1);
         this.labels1 = new JLabel[3];
         for (int i = 0; i < labels1.length; i++) {
             labels1[i] = new JLabel();
@@ -94,8 +129,11 @@ public class SegundaEvaluacionUI extends JFrame {
         }
 
         JPanel bluePanel = panelList.get(27);
-        bluePanel.setLayout(new FlowLayout(FlowLayout.CENTER,5,50));
+        bluePanel.setLayout(new FlowLayout(FlowLayout.LEFT,4,50));
         this.labels2 = new JLabel[3];
+        JLabel hpLabel2 = new JLabel("Vidas:");
+        hpLabel2.setFont(customFont);
+        bluePanel.add(hpLabel2);
         for (int i = 0; i < labels2.length; i++) {
             labels2[i] = new JLabel();
             labels2[i].setIcon(imageIcon);
@@ -122,7 +160,7 @@ public class SegundaEvaluacionUI extends JFrame {
             JPanel panel = new JPanel();
             panel.setOpaque(true);
             panel.setBackground(new Color(0,0,0,0));
-//            panel.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+            panel.setBorder(BorderFactory.createLineBorder(Color.BLACK));
             panelList.add(panel);
         }
     }

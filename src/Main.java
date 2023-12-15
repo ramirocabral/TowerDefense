@@ -15,8 +15,8 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
 //        SwingUtilities.invokeLater(InitialImage::new);
-//        InitialImage img = new InitialImage();
-//        img.setVisible(true);
+        InitialImage img = new InitialImage();
+        img.setVisible(true);
         game();
     }
 

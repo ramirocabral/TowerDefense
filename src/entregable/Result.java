@@ -23,8 +23,7 @@ public class Result extends JFrame {
         setSize(width, height);
         setResizable(false);
 
-        ImageIcon icon = new ImageIcon("assets/castleIcon.png");
-        setIconImage(icon.getImage());
+        this.setIconImage(new ImageIcon("assets/castleIcon.jpg").getImage());
 
         //Titulo
         JLabel titleLabel = new JLabel("Juego Finalizado!");

@@ -4,23 +4,33 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.io.File;
+import java.io.IOException;
 
 public class InitialImage extends JFrame {
 
-//    private Fontgcc
+    private Font customFont;
     public InitialImage() {
+        this.setIconImage(new ImageIcon("assets/castleIcon.jpg").getImage());
+        File fontFile = new File("fonts/joystix-monospace.otf");
+        try {
+            this.customFont = Font.createFont(Font.TRUETYPE_FONT, fontFile);
+        } catch (FontFormatException | IOException e) {
+            throw new RuntimeException(e);
+        }
+
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(500, 469);
         setResizable(false);
 
         JLabel titleLabel = new JLabel("Tower");
         titleLabel.setForeground(Color.YELLOW);
-        titleLabel.setFont(new Font("Joystix Monospace", Font.BOLD, 50));
+        titleLabel.setFont(customFont.deriveFont(50f));
         titleLabel.setBounds(70, 110, 500, 50);
 
         JLabel titleLabel2 = new JLabel("Defense");
         titleLabel2.setForeground(Color.YELLOW);
-        titleLabel2.setFont(new Font("Joystix Monospace", Font.BOLD, 50));
+        titleLabel2.setFont(customFont.deriveFont(50f));
         titleLabel2.setBounds(30, 160, 500, 50);
 
         //start button
@@ -50,22 +60,22 @@ public class InitialImage extends JFrame {
         setLocationRelativeTo(null);
 //        setVisible(true);
     }
-    private static JLabel createLabel(String text, Runnable onClickAction) {
+    private  JLabel createLabel(String text, Runnable onClickAction) {
         JLabel label = new JLabel(text);
         label.setForeground(Color.WHITE);
-        label.setFont(new Font("Joystix Monospace", Font.BOLD, 16));
+        label.setFont(customFont.deriveFont(18f));
 
 
         label.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseEntered(MouseEvent e) {
-                label.setFont(new Font("Joystix Monospace", Font.BOLD, 22));
+                label.setFont(customFont.deriveFont(19f));
                 label.setForeground(Color.YELLOW);
             }
 
             @Override
             public void mouseExited(MouseEvent e) {
-                label.setFont(new Font("Joystix Monospace", Font.BOLD, 16));
+                label.setFont(customFont.deriveFont(18f));
                 label.setForeground(Color.WHITE);
             }
 
