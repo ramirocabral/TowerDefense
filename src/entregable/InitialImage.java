@@ -1,7 +1,5 @@
 package entregable;
 
-import game.components.RumbleGame;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
@@ -9,6 +7,7 @@ import java.awt.event.MouseEvent;
 
 public class InitialImage extends JFrame {
 
+//    private Fontgcc
     public InitialImage() {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(500, 469);
@@ -49,7 +48,7 @@ public class InitialImage extends JFrame {
         add(backgroundLabel);
 
         setLocationRelativeTo(null);
-        setVisible(true);
+//        setVisible(true);
     }
     private static JLabel createLabel(String text, Runnable onClickAction) {
         JLabel label = new JLabel(text);
@@ -75,7 +74,6 @@ public class InitialImage extends JFrame {
                 onClickAction.run();
             }
         });
-
         return label;
     }
 

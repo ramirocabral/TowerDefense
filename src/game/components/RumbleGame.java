@@ -1,7 +1,7 @@
 package game.components;
 
-import game.random.RandomGenerator;
 import entregable.Result;
+import game.random.RandomGenerator;
 
 
 public class RumbleGame {
@@ -64,12 +64,14 @@ public class RumbleGame {
         PathBox box27 = new PathBox(segundaEvaluacionUI.getButton(2), "Oeste");
         PathBox box39 = new PathBox(segundaEvaluacionUI.getButton(4), "Suroeste");
 
+        //noroeste
         box15.setNorthBox(null);
         box15.setSouthBox(box27);
 
         box27.setNorthBox(box15);
         box27.setSouthBox(box39);
 
+        //suroeste
         box39.setNorthBox(box27);
         box39.setSouthBox(null);
 
@@ -81,8 +83,8 @@ public class RumbleGame {
         PathBox box29 = new PathBox(segundaEvaluacionUI.getButton(3), "Este");
         PathBox box41 = new PathBox(segundaEvaluacionUI.getButton(5), "Sureste");
 
-        //TODO: arreglar el tema de las vidas
 
+        //noreste
         box17.setNorthBox(null);
         box17.setSouthBox(box29);
 
@@ -96,9 +98,8 @@ public class RumbleGame {
         eastPath.getPathBoxes().add(box29);
         eastPath.getPathBoxes().add(box41);
 
-        castleOne.setLifeLabel(segundaEvaluacionUI.getVidasPlayerOneLabel());
-        castleTwo.setLifeLabel(segundaEvaluacionUI.getVidasPlayerTwoLabel());
-
+        castleOne.setLifeLabels(segundaEvaluacionUI.getVidasPlayerOneLabel());
+        castleTwo.setLifeLabels(segundaEvaluacionUI.getVidasPlayerTwoLabel());
         //
     }
 
@@ -107,6 +108,7 @@ public class RumbleGame {
         System.out.println();
         System.out.println();
         System.out.println("Siguiente Ronda numero: " + round);
+        // seleccionamos uno de los dos jugadores, al azar
         int jugador = RandomGenerator.getInstance().nextPlayer();
         System.out.println("Mueve primero el Jugador numero " + jugador);
         if(jugador == 1) {
@@ -121,7 +123,6 @@ public class RumbleGame {
         if(playerOne.getCastle().getCastleLife() <= 0) {
             System.out.println("****         Ganador el Jugador Azul!!!         ****");
             loopGame = false;
-
         }
         if(playerTwo.getCastle().getCastleLife() <= 0) {
             System.out.println("****         Ganador el Jugador Rojo!!!         ****");
@@ -132,7 +133,7 @@ public class RumbleGame {
         }
         if (loopGame && !checkMonsters()) {
             loopGame = false;
-            throw new TieException("la concha de tu madre allboys");
+            throw new TieException("Empate!");
         }
     }
 
@@ -158,10 +159,5 @@ public class RumbleGame {
                 break;
             }
         }
-
-        //movido al Main, para mejorar el encapsulamiento
-
-//        Result resultUI = new Result(playerOne.getCastle().getLife(), playerTwo.getCastle().getLife(), round);
-//        resultUI.setVisible(true);
     }
 }

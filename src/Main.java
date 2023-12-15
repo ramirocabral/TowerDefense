@@ -1,31 +1,23 @@
-import entregable.Comparators.*;
-import entregable.InitialImage;
+import entregable.Comparators.NumberOfTypesComparator;
 import entregable.Result;
+import entregable.monstruos.*;
 import game.components.Monster;
 import game.components.RumbleGame;
 import game.components.TieException;
+import entregable.InitialImage;
 import game.monsters.*;
+
+import javax.swing.*;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
-import entregable.monstruos.*;
-
-import javax.swing.*;
-
-import static java.lang.Thread.sleep;
 
 public class Main {
     public static void main(String[] args) {
-
 //        SwingUtilities.invokeLater(InitialImage::new);
-
+//        InitialImage img = new InitialImage();
+//        img.setVisible(true);
         game();
-
-//        try{Thread.sleep(5000);}
-//        catch (InterruptedException e){
-//            e.printStackTrace();
-//        }
-//        System.exit(0);
     }
 
     public static void game(){
@@ -33,20 +25,18 @@ public class Main {
         rumbleGame.init();
 
         List<Monster> monstersOne = Arrays.asList(
-                new ElectroBOOM("AgusMurray"),
-                new ElectroBOOM("AgusMurray")
+            new Golem("Golem"),
+            new HolyKnight("Caballero"),
+            new Cadabra("Cadabra"),
+            new Ninja("Ninja")
         );
-
         rumbleGame.getPlayerOne().setMonsters(monstersOne);
 
-        List<Monster> monstersTwo = Arrays.asList(new EvilBeast("Vaca"),
-        new EvilBeast("Vaca"),
-                new EvilBeast("Vaca"),
-                new EvilBeast("Vaca"),
-//        new Spartan("Vaca"),
-//        new IceBeast("Vaca"),
-        new EvilBeast("Vaca"));
-
+        List<Monster> monstersTwo = Arrays.asList(
+            new EvilBeast("Vaca"),
+            new ElectroBOOM("Vaca"),
+            new Spartan("Vaca")
+        );
         Collections.sort(monstersTwo, new NumberOfTypesComparator());
         rumbleGame.getPlayerTwo().setMonsters(monstersTwo);
 

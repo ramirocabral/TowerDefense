@@ -60,8 +60,8 @@ public class PathBox {
             buttonUI.setVisible(true);
 //            buttonUI.setBackground(new Color(0,0,0,0));
 //            buttonUI.setBorder(BorderFactory.createLineBorder(new Color(0,0,0,0)));
-            buttonUI.revalidate();
-            buttonUI.repaint();
+//            buttonUI.revalidate();
+//            buttonUI.repaint();
 
 //            if(monster.getPlayer().getId().equals(1L)) {
 //                buttonUI.setBackground(new Color(123, 179, 252));

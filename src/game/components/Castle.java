@@ -2,13 +2,14 @@ package game.components;
 
 import javax.swing.*;
 import java.util.Iterator;
+import java.util.List;
 
 public class Castle {
 
     private Integer castleLife = 3;
     private Path westPath;
     private Path eastPath;
-    private JLabel lifeLabel;
+    private JLabel[] lifeLabels;
 
     public Integer getCastleLife() {
         return castleLife;
@@ -30,9 +31,9 @@ public class Castle {
         } else {
             eastPath.nextRound(playerId, this);
         }
+        updateLifeLabel(castleLife);
         westPath.update();
         eastPath.update();
-        lifeLabel.setText("Vida: " + this.castleLife);
     }
 
     public void setCastleLife(Integer castleLife) {
@@ -61,7 +62,18 @@ public class Castle {
 
     public void setLife(int life) {this.castleLife = life;}
 
-    public void setLifeLabel(JLabel lifeLabel) {
-        this.lifeLabel = lifeLabel;
+    public void setLifeLabels(JLabel[] lifeLabels) {
+        this.lifeLabels = lifeLabels;
+    }
+
+    public void updateLifeLabel(int life) {
+        this.castleLife = life;
+        for (int i = 0; i < lifeLabels.length; i++) {
+            if (i < life) {
+                lifeLabels[i].setVisible(true);
+            } else {
+                lifeLabels[i].setVisible(false);
+            }
+        }
     }
 }

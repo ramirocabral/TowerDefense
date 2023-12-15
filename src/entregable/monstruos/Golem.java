@@ -7,6 +7,7 @@ import game.types.Type;
 import java.util.Arrays;
 import entregable.ataques.Fire.*;
 
+import javax.swing.*;
 
 
 public class Golem extends Monster{
@@ -21,6 +22,7 @@ public class Golem extends Monster{
         this.monsterName = name;
         this.types = Arrays.asList(Type.FIRE);
         this.movement_enabled = false;
+        this.image = new ImageIcon("assets/monsters/golem.png");
         }
 
         @Override
@@ -38,15 +40,5 @@ public class Golem extends Monster{
             movement_enabled = false;
         } else {
              movement_enabled = true;        }
-    }
-    @Override
-    public void onDamageReceive(Integer damage, Monster monster) {
-        this.life = this.life - damage;
-        if(this.life < 0) {
-            this.life = 0;
-            this.activeSkill = new ColdBreath();
-            attack(monster);
-        }
-        System.out.println(this + " fue herido, queda con " + this.life + " puntos de vida");
     }
 }
