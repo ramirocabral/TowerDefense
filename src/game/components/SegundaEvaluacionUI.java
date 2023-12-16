@@ -99,7 +99,6 @@ public class SegundaEvaluacionUI extends JFrame {
 //        }
 
         initLifeLabels();
-
     }
 
     /**

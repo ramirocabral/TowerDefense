@@ -1,13 +1,12 @@
 package entregable.monstruos;
 
-import game.types.Type;
 import entregable.ataques.Water.Wave;
-import game.components.*;
+import game.components.Monster;
+import game.components.Player;
+import game.types.Type;
 
 import javax.swing.*;
-import java.awt.*;
 import java.util.Arrays;
-import java.util.List;
 
 public class Siren extends Monster {
     //Es water y radiant

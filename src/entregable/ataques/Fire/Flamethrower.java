@@ -2,7 +2,6 @@ package entregable.ataques.Fire;
 
 import entregable.ataques.Multipliers;
 import game.components.Monster;
-import game.types.Type;
 
 
 public class Flamethrower implements Fire{

@@ -9,6 +9,7 @@ public class BackgroundPanel extends JComponent {
 
     @Override
     protected void paintComponent(Graphics g) {
+        System.out.println("Estoy en paintComponent");
         super.paintComponent(g);
         g.drawImage(background.getImage(), 0, 0, this);
     }

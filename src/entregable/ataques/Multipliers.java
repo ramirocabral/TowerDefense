@@ -1,10 +1,7 @@
 package entregable.ataques;
 
-import game.types.*;
-import java.util.Arrays;
-import java.util.Collections.*;
+import game.types.Type;
 import java.util.HashMap;
-import java.util.Map;
 
 
 public enum Multipliers {

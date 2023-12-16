@@ -149,7 +149,7 @@ public class RumbleGame {
     public void startGame() throws TieException {
         while(loopGame) {
             try {
-                Thread.sleep(1500);
+                Thread.sleep(1000);
                 this.nextRound();
             }
             catch (InterruptedException e) {

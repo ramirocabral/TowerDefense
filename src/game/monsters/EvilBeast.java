@@ -17,6 +17,8 @@ public class EvilBeast extends Monster {
         this.image = new ImageIcon("assets/monsters/evilBeast.png");
     }
 
+
+
     @Override
     public void attack(Monster enemy) {
         int damage = this.activeSkill.damage(enemy);

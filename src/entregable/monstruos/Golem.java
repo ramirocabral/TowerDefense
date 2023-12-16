@@ -1,13 +1,12 @@
 package entregable.monstruos;
-import game.attacks.Attack;
-import game.attacks.ColdBreath;
+
+import entregable.ataques.Fire.Flamethrower;
 import game.components.Monster;
 import game.components.PathBox;
 import game.types.Type;
-import java.util.Arrays;
-import entregable.ataques.Fire.*;
 
 import javax.swing.*;
+import java.util.Arrays;
 
 
 public class Golem extends Monster{

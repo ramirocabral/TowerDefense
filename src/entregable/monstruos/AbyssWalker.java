@@ -2,9 +2,7 @@ package entregable.monstruos;
 
 import entregable.ataques.Demon.VoidSlash;
 import entregable.ataques.Venom.PoisonCover;
-import entregable.ataques.Venom.ToxinSplash;
 import game.attacks.Attack;
-import game.attacks.Slice;
 import game.components.Monster;
 import game.types.Type;
 

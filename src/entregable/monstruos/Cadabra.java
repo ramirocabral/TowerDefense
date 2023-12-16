@@ -1,8 +1,10 @@
 package entregable.monstruos;
-import entregable.ataques.Psychic.*;
+
+import entregable.ataques.Psychic.Mindcrush;
 import game.components.Monster;
-import game.types.Type;
 import game.random.RandomGenerator;
+import game.types.Type;
+
 import javax.swing.*;
 import java.util.Arrays;
 

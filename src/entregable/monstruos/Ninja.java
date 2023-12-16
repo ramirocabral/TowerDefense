@@ -1,15 +1,14 @@
 package entregable.monstruos;
-import entregable.ataques.Electric.Discharge;
+
 import entregable.ataques.Water.KangarooKick;
 import entregable.ataques.Water.TsunamiPunch;
+import game.attacks.Attack;
 import game.components.Monster;
 import game.components.PathBox;
 import game.random.RandomGenerator;
-import game.attacks.Attack;
 import game.types.Type;
 
 import javax.swing.*;
-import java.awt.*;
 import java.util.Arrays;
 import java.util.List;
 

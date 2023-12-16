@@ -1,10 +1,8 @@
 package entregable.ataques.Electric;
 
-import entregable.ataques.Electric.Electric;
 import entregable.ataques.Multipliers;
 import game.components.Monster;
 import game.random.RandomGenerator;
-import game.types.Type;
 
 public class Thunderstrike implements Electric {
 

@@ -4,7 +4,6 @@ import game.attacks.Attack;
 import game.types.Type;
 
 import javax.swing.*;
-import java.awt.*;
 import java.util.List;
 
 public abstract class Monster {

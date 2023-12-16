@@ -1,8 +1,8 @@
 package entregable.ataques.Electric;
+
+import entregable.ataques.Multipliers;
 import game.components.Monster;
 import game.random.RandomGenerator;
-import game.types.Type;
-import entregable.ataques.Multipliers;
 public class Discharge implements Electric {
     //pega x1.7 a water y cold
     @Override

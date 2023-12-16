@@ -1,10 +1,10 @@
 package game.monsters;
 
+import game.attacks.Cold;
 import game.attacks.ColdBreath;
 import game.attacks.IceSpike;
 import game.components.Monster;
 import game.components.PathBox;
-import game.attacks.Cold;
 import game.types.Type;
 
 import javax.swing.*;

@@ -3,10 +3,6 @@ package entregable.ataques.Venom;
 import entregable.ataques.Multipliers;
 import game.components.Monster;
 import game.random.RandomGenerator;
-import game.attacks.Attack;
-import game.components.Monster;
-import game.random.RandomGenerator;
-import game.types.Type;
 
 public class ToxinSplash implements Venom{
     @Override

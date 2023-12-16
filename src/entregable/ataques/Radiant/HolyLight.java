@@ -3,7 +3,6 @@ package entregable.ataques.Radiant;
 import entregable.ataques.Multipliers;
 import game.components.Monster;
 import game.random.RandomGenerator;
-import game.types.Type;
 
 public class HolyLight implements Radiant {
     @Override

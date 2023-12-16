@@ -1,12 +1,13 @@
 package entregable.monstruos;
 
 
+import entregable.ataques.Fire.FireBall;
 import entregable.ataques.Fire.Flamethrower;
 import game.attacks.Attack;
 import game.components.Monster;
 import game.components.RumbleGame;
 import game.types.Type;
-import entregable.ataques.Fire.*;
+
 import javax.swing.*;
 import java.util.Arrays;
 import java.util.List;

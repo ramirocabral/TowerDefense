@@ -1,8 +1,8 @@
 package entregable.ataques.Psychic;
+
 import entregable.ataques.Multipliers;
 import game.components.Monster;
 import game.random.RandomGenerator;
-import game.types.Type;
 
 public class Mindcrush implements Psychic{
     @Override

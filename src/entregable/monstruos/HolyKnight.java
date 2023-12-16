@@ -1,11 +1,11 @@
 package entregable.monstruos;
-import entregable.ataques.Radiant.*;
-import game.components.Monster;
+
+import entregable.ataques.Radiant.HolyLight;
 import game.attacks.Attack;
 import game.attacks.Slice;
-import game.components.PathBox;
+import game.components.Monster;
 import game.types.Type;
-import game.random.RandomGenerator;
+
 import javax.swing.*;
 import java.util.Arrays;
 import java.util.List;

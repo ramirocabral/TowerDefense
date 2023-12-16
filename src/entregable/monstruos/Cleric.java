@@ -2,7 +2,6 @@ package entregable.monstruos;
 
 import entregable.ataques.Radiant.HolyLight;
 import game.attacks.Attack;
-import game.attacks.Slice;
 import game.components.Monster;
 import game.components.PathBox;
 import game.random.RandomGenerator;

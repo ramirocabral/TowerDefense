@@ -1,9 +1,8 @@
 package entregable.ataques.Venom;
+
 import entregable.ataques.Multipliers;
-import game.attacks.Attack;
 import game.components.Monster;
 import game.random.RandomGenerator;
-import game.types.Type;
 
 public class VenomousSpit implements Venom{
     @Override

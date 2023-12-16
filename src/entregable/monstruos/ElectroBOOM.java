@@ -1,13 +1,13 @@
 package entregable.monstruos;
-import entregable.ataques.Electric.*;
-import game.attacks.ColdBreath;
-import game.components.Monster;
+
+import entregable.ataques.Electric.Discharge;
+import entregable.ataques.Electric.Thunderstrike;
 import game.attacks.Attack;
+import game.components.Monster;
 import game.components.PathBox;
 import game.types.Type;
 
 import javax.swing.*;
-import java.awt.*;
 import java.util.Arrays;
 import java.util.List;
 

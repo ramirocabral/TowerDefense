@@ -1,10 +1,9 @@
 package entregable.monstruos;
+
 import entregable.ataques.Venom.ToxinSplash;
 import entregable.ataques.Venom.VenomousSpit;
 import game.attacks.Attack;
 import game.components.Monster;
-import game.components.PathBox;
-import game.random.RandomGenerator;
 import game.types.Type;
 
 import javax.swing.*;
