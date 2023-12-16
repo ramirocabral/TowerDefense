@@ -8,10 +8,17 @@ import game.types.Type;
 import javax.swing.*;
 import java.util.Arrays;
 
+/*
+ * Nombre: Golem
+ * Tipo: Fuego (Principal)
+ * Vida: 2000
+ * Ataques: Flamethrower
+ * Descripción: El Golem es un monstruo que se caracteriza por su gran resistencia. Su ataque principal es Flamethrower,
+ * el cual es un ataque que se basa en su condicion como monstruo de fuego. El Golem, debido a su tamaño, solo puede
+ * moverse cada dos turnos.
+ * */
 
 public class Golem extends Monster{
-    //Es Fire
-    //Le hace counter Demon y Agua
 
     private boolean movement_enabled;
 

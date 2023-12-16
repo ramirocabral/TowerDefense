@@ -12,6 +12,16 @@ import javax.swing.*;
 import java.util.Arrays;
 import java.util.List;
 
+/*
+ * Nombre: Ninja
+ * Tipo: Agua (Principal)
+ * Vida: 500
+ * Ataques: TsunamiPunch, KangarooKick
+ * Descripción: El Ninja es un monstruo que vivio en las sombras toda su vida, por lo que se especializa en el uso de ataques
+ * sorpresivos. Su ataque principal es TsunamiPunch, el cual es un ataque que se basa en su pasado como ninja. Su segundo ataque
+ * es KangarooKick, el cual es un ataque que se basa en su condicion como monstruo de agua. El Ninja tiene la habilidad de
+ * esquivar ataques, por lo que tiene un 30% de chance de no recibir daño.
+ * */
 
 public class Ninja extends Monster {
     private List<Attack> skills = Arrays.asList(new TsunamiPunch() , new KangarooKick());

@@ -8,9 +8,18 @@ import game.types.Type;
 import javax.swing.*;
 import java.util.Arrays;
 
+/*
+ * Nombre: Siren
+ * Tipo: Agua (Principal), Radiante
+ * Vida: 1200
+ * Ataques: Wave
+ * La siren es curandera
+ * Descripción: La Siren es un monstruo que se caracteriza por su compañerismo. Su ataque principal es Wave,
+ * el cual es un ataque que se basa en su condicion como monstruo de agua. La Siren tiene la habilidad de curar a su equipo
+ * cada dos turnos.
+ * */
+
 public class Siren extends Monster {
-    //Es water y radiant
-    //cura a su equipo cada 2 movimientos
     private boolean heal;
 
     public Siren(String name) {

@@ -10,6 +10,17 @@ import javax.swing.*;
 import java.util.Arrays;
 import java.util.List;
 
+/*
+ * Nombre: Blaze
+ * Tipo: Fuego (Principal)
+ * Vida: 350
+ * Ataques: FireBall, Flamethrower
+ * Descripción: El Blaze es un monstruo que se especializa en el uso de la magia. Su ataque principal es FireBall, el cual
+ * es un ataque que se basa en su pasado como mago. Su segundo ataque es Flamethrower, el cual es un ataque que se basa en
+ * su condicion como monstruo de fuego. El Blaze tiene la habilidad de potenciar su ataque a medida que aumentan las rondas
+ * lo cual lo hace un monstruo muy peligroso en el late (rondas altas).
+ * */
+
 public class Blob extends Monster{
 
     private List<Attack> skills = Arrays.asList(new VenomousSpit(), new ToxinSplash());

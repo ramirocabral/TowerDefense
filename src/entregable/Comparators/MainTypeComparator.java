@@ -4,6 +4,10 @@ import game.components.Monster;
 
 import java.util.Comparator;
 
+/*
+ * Comparador de tipos principales de los monstruos (el tipo principal es el primero en la lista de tipos de cada mounstro).
+ * Aquel monstruo con tipo principal más fuerte (aquel que tenga menor ordinal) será el que se encuentre primero en la "lista".
+ * */
 public class MainTypeComparator implements Comparator<Monster> {
     @Override
     //Compara por el tipo principal, el cual suponemos que esta en la primer posicion de la lista de tipos

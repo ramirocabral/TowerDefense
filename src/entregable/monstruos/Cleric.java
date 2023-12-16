@@ -11,6 +11,16 @@ import javax.swing.*;
 import java.util.Arrays;
 import java.util.List;
 
+/*
+ * Nombre: Cleric
+ * Tipo: Radiante (Principal), Demonio
+ * Vida: 400
+ * Ataques: HolyLight
+ * Descripción: El Cleric es un monstruo que se especializa en el poder celestial. Su ataque principal es HolyLight, el cual
+ * es un ataque que se basa en su pasado como sacerdote. El Cleric tiene la habilidad de invocar a un Archangel con una probabilidad
+ * del 20% cuando muere.
+ * */
+
 public class Cleric extends Monster {
     private List<Attack> skills = Arrays.asList(new HolyLight());
     private PathBox actualPathBox;

@@ -11,6 +11,15 @@ import javax.swing.*;
 import java.util.Arrays;
 import java.util.List;
 
+/*
+ * Nombre: ElectroBOOM
+ * Tipo: Electrico (Principal)
+ * Vida: 500
+ * Ataques: Discharge, Thunderstrike
+ * Descripción: El ElectroBOOM es un monstruo que se especializa en el uso de la fisica, basada en su pasado como Youtuber.
+ * Su ataque principal es Discharge, el cual es un ataque que se basa en su pasado como fisico.
+ * */
+
 
 public class ElectroBOOM extends Monster{
     private List<Attack> skills = Arrays.asList(new Discharge() , new Thunderstrike());
