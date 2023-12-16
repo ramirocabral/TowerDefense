@@ -5,7 +5,7 @@ import java.awt.*;
 
 public class BackgroundPanel extends JComponent {
 
-    private ImageIcon background = new ImageIcon("assets/background.png");
+    private ImageIcon background = new ImageIcon("assets/pxArt.png");
 
     @Override
     protected void paintComponent(Graphics g) {

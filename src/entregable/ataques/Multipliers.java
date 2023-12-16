@@ -1,14 +1,14 @@
 package entregable.ataques;
 
-import game.types.*;
-import java.util.Arrays;
-import java.util.Collections.*;
+import game.types.Type;
 import java.util.HashMap;
-import java.util.Map;
 
-
+/*
+* Clase que contiene los multiplicadores de daño de cada tipo de monstruo. Los multiplicadores inicializados para cada tipo
+* de monstruo son los counters de cada tipo de monstruo.
+* */
 public enum Multipliers {
-    //    SWORD(),
+    SWORD(initialize(Type.BEAST, 1.5)),
     DEMON (initialize( Type.FIRE, 1.5, Type.COLD, 1.5, Type.WATER, 1.5, Type.ELECTRIC, 1.5)),
     PSYCHIC(initialize(Type.SWORD, 1.5, Type.RADIANT, 1.5,Type.BEAST, 0.5)),
     FIRE(initialize(Type.COLD, 2.0, Type.BEAST, 2.0)),
@@ -21,9 +21,17 @@ public enum Multipliers {
 
     private HashMap<Type, Double> mult;
 
+    /*
+    * Constructor de Multipliers
+    * */
+
     Multipliers(HashMap<Type, Double> typeDoubleHashMap) {
         this.mult = typeDoubleHashMap;
     }
+
+   /*
+   * Metodo que inicializa el HashMap de Multipliers
+   * */
 
     public static HashMap<Type, Double> initialize(Object... keyValuePairs) throws IllegalArgumentException{
         if (keyValuePairs.length % 2 != 0)
@@ -35,9 +43,15 @@ public enum Multipliers {
         return map;
     }
 
+    /*
+    * Metodo que devuelve el multiplicador de un tipo de monstruo. Puesto que solo se inicializaron los multiplicadores para los
+    * counters de cada tipo de monstruo, si el tipo no tiene multiplicador, se devuelve 1.0
+    * */
+
     public Double getMultiplier(Type type){
         if (!mult.containsKey(type))
             return 1.0;
         return mult.get(type);
     }
+
 }
