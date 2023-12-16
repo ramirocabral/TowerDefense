@@ -23,8 +23,8 @@ public class Golem extends Monster{
     private boolean movement_enabled;
 
     public Golem(String name) {
-        this.life = 2000;
-        this.maxLife = 2000;
+        this.life = 2200;
+        this.maxLife=2200;
         this.activeSkill = new Flamethrower();
         this.monsterName = name;
         this.types = Arrays.asList(Type.FIRE);

@@ -161,9 +161,9 @@ public class SegundaEvaluacionUI extends JFrame {
 
 
         //borders
-        for (JLabel label : buttons) {
-            label.setBorder(BorderFactory.createLineBorder(Color.BLACK));
-        }
+//        for (JLabel label : buttons) {
+//            label.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+//        }
 
         initLifeLabels();
     }
@@ -186,6 +186,7 @@ public class SegundaEvaluacionUI extends JFrame {
         redPanel.setLayout(new FlowLayout(FlowLayout.LEFT,4,5));
         redPanel.setAlignmentY(Component.TOP_ALIGNMENT);
         JLabel hpLabel1 = new JLabel("Vidas:");
+        hpLabel1.setForeground(Color.BLACK);
         hpLabel1.setFont(customFont);
         redPanel.add(hpLabel1);
         this.labels1 = new JLabel[3];
@@ -202,6 +203,7 @@ public class SegundaEvaluacionUI extends JFrame {
         bluePanel.setAlignmentY(Component.BOTTOM_ALIGNMENT);
         this.labels2 = new JLabel[3];
         JLabel hpLabel2 = new JLabel("Vidas:");
+        hpLabel2.setForeground(Color.BLACK);
         hpLabel2.setVerticalAlignment(SwingConstants.BOTTOM);
         hpLabel2.setFont(customFont);
         bluePanel.add(hpLabel2);
@@ -231,7 +233,7 @@ public class SegundaEvaluacionUI extends JFrame {
             JPanel panel = new JPanel();
             panel.setOpaque(true);
             panel.setBackground(new Color(0,0,0,0));
-            panel.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+//            panel.setBorder(BorderFactory.createLineBorder(Color.BLACK));
             panelList.add(panel);
         }
     }

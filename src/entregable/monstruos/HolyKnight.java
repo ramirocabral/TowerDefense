@@ -21,10 +21,10 @@ import java.util.List;
 
 public class HolyKnight extends Monster {
     private List<Attack> skills = Arrays.asList(new Slice(), new HolyLight());
-
+    private boolean revive = true;
     public HolyKnight(String name) {
         this.life = 570;
-        this.maxLife = 570;
+        this.maxLife= 570;
         this.activeSkill = skills.get(0);
         this.monsterName = name;
         this.types = Arrays.asList(Type.RADIANT, Type.SWORD);
@@ -45,7 +45,13 @@ public class HolyKnight extends Monster {
     public void onDamageReceive(Integer damage, Monster monster) {
         this.life = this.life - damage;
         if(this.life < 0) {
-            this.life = 0;
+            if(revive) {
+                this.life = 1;
+                revive = false;
+            }
+            else {
+                this.life = 0;
+            }
         }
         System.out.println(this + " fue herido, queda con " + this.life + " puntos de vida");
     }

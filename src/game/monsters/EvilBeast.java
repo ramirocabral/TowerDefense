@@ -6,12 +6,21 @@ import game.types.Type;
 
 import javax.swing.*;
 import java.util.Arrays;
+/*
+ * Nombre: EvilBeast
+ * Tipo: Demon (Principal
+ * Vida: 666
+ * Ataques: Curse
+ * Descripción: El EvilBeast es un monstruo que se especializa en el uso de la maldad. Su ataque principal es Curse
+ * el cual es un ataque que se basa en su condicion como monstruo demoniaco.
+ * */
+
 
 public class EvilBeast extends Monster {
 
     public EvilBeast(String name) {
         this.life = 666;
-        this.maxLife = 666;
+        this.maxLife= 666;
         this.monsterName = name;
         this.activeSkill = new Curse();
         this.types = Arrays.asList(Type.DEMON, Type.BEAST, Type.FIRE);

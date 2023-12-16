@@ -28,15 +28,14 @@ public class Blaze extends Monster {
 
     public Blaze(String name) {
         this.life = 350;
-        this.maxLife = 350;
+        this.maxLife=this.life;
         this.activeSkill = skills.get(0);
         this.monsterName = name;
         this.types = Arrays.asList(Type.FIRE);
         this.image = new ImageIcon("assets/monsters/Blaze.png");
     }
-    //RumbleGame.getInstance().getRound();
+
     @Override
-    //A medida que aumentan las rondas pega mas
     public void attack(Monster enemy) {
         int damage = this.activeSkill.damage(enemy) * (int) ( RumbleGame.getInstance().getRound() * 1.05);
         System.out.println("--     ["+ this +"] ataca a [" + enemy + "] haciendole " + damage + " de daño");

@@ -25,18 +25,17 @@ public class Blob extends Monster{
 
     private List<Attack> skills = Arrays.asList(new VenomousSpit(), new ToxinSplash());
 
-    public Blob(String name) {
-        this.life = 350;
-        this.maxLife = 350;
-        this.activeSkill = skills.get(0);
-        this.monsterName = name;
-        this.types = Arrays.asList(Type.VENOM);
-        this.image = new ImageIcon("assets/monsters/blob.png");
-    }
+        public Blob(String name) {
+            this.life = 350;
+            this.maxLife= 350;
+            this.activeSkill = skills.get(0);
+            this.monsterName = name;
+            this.types = Arrays.asList(Type.VENOM);
+            this.image = new ImageIcon("assets/monsters/blob.png");
+        }
 
     @Override
     public void attack(Monster enemy) {
-
         int damage = this.activeSkill.damage(enemy);
         System.out.println("--     ["+ this +"] ataca a [" + enemy + "] haciendole " + damage + " de daño");
         enemy.onDamageReceive(damage, this);

@@ -6,6 +6,8 @@ import game.components.Monster;
 import game.components.RumbleGame;
 import game.components.TieException;
 import game.monsters.EvilBeast;
+import game.monsters.IceBeast;
+import game.monsters.Spartan;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -25,7 +27,6 @@ public class Main {
                 e.printStackTrace();
             }
         }
-
         game();
     }
     public static void game(){
@@ -33,16 +34,26 @@ public class Main {
         rumbleGame.init();
 
         List<Monster> monstersOne = Arrays.asList(
-                new Blaze("Blaze"),
+                new EvilBeast("EvilBeast"),
                 new ElectroBOOM("ElectroBOOM"),
-                new Golem("Golem")
+                new AbyssWalker("AbyssWalker"),
+                new Blob("Blob"),
+                new Spartan("Spartan"),
+                new IceBeast("IceBeast"),
+                new Ninja("Ninja"),
+                new Blaze("Blaze")
         );
+
         rumbleGame.getPlayerOne().setMonsters(monstersOne);
 
         List<Monster> monstersTwo = Arrays.asList(
+                new Siren("Siren"),
+                new CrowApostate("crow"),
                 new Cadabra("Cadabra"),
-                new EvilBeast("Evilbeast" ),
-                new Archangel("Archangel")
+                new Ninja("Ninja"),
+                new Golem("Golem"),
+                new Cleric("Cleric"),
+                new HolyKnight("HolyKnight")
         );
         Collections.sort(monstersTwo, new NumberOfTypesComparator());
         rumbleGame.getPlayerTwo().setMonsters(monstersTwo);

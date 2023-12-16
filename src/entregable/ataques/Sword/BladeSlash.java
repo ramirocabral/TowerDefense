@@ -8,7 +8,7 @@ public class BladeSlash implements Sword {
 
     @Override
     public int damage(Monster monster) {
-        int damage = RandomGenerator.getInstance().calculateDamage(100, 140);
+        int damage = RandomGenerator.getInstance().calculateDamage(130, 180);
         return (int)(damage* Multipliers.SWORD.getMultiplier(monster.getTypes().get(0)));
     }
 

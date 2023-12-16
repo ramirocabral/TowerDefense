@@ -27,6 +27,10 @@ public class Path {
             return null;
     }
 
+    public boolean contains(Monster monster){
+        return pathBoxes.stream().anyMatch( pathBox -> pathBox.getMonster() != null && pathBox.getMonster().equals(monster));
+    }
+
     public void nextRound(Long playerId, Castle castle) {
         Optional<PathBox> occupiedPathBox = pathBoxes.stream().filter(pathBox -> pathBox.getMonster() != null && pathBox.getMonster().getPlayer().getId().equals(playerId)).findFirst();
         //buscamos la casilla ocupada por el monstruo
@@ -53,6 +57,9 @@ public class Path {
                         if(occupiedPathBox.get().getNorthBox().getMonster().getLife() <= 0) {
                             occupiedPathBox.get().getNorthBox().setMonster(null);
                         }
+                        if (occupiedPathBox.get().getMonster().getLife() <= 0) {
+                            occupiedPathBox.get().setMonster(null);
+                        }
                     }
                 }
             //si es el player 2 (rojo)
@@ -75,6 +82,9 @@ public class Path {
                         occupiedPathBox.get().getSouthBox().getMonster().attack(occupiedPathBox.get().getMonster());
                         if (occupiedPathBox.get().getSouthBox().getMonster().getLife() <= 0) {
                             occupiedPathBox.get().getSouthBox().setMonster(null);
+                        }
+                        if (occupiedPathBox.get().getMonster().getLife() <= 0) {
+                            occupiedPathBox.get().setMonster(null);
                         }
                     }
                 }

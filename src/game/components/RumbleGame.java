@@ -55,48 +55,47 @@ public class RumbleGame {
         playerTwo.setCastle(castleTwo);
 
 
-
         segundaEvaluacionUI = new SegundaEvaluacionUI();
         segundaEvaluacionUI.init().setVisible(true);
 
 
-        PathBox box15 = new PathBox(segundaEvaluacionUI.getButton(0),segundaEvaluacionUI.getHealthBar(0), "Noroeste");
-        PathBox box27 = new PathBox(segundaEvaluacionUI.getButton(2),segundaEvaluacionUI.getHealthBar(2), "Oeste");
-        PathBox box39 = new PathBox(segundaEvaluacionUI.getButton(4),segundaEvaluacionUI.getHealthBar(4), "Suroeste");
+        PathBox box3 = new PathBox(segundaEvaluacionUI.getButton(0),segundaEvaluacionUI.getHealthBar(0), "Noroeste");
+        PathBox box6 = new PathBox(segundaEvaluacionUI.getButton(2),segundaEvaluacionUI.getHealthBar(2), "Oeste");
+        PathBox box9 = new PathBox(segundaEvaluacionUI.getButton(4),segundaEvaluacionUI.getHealthBar(4), "Suroeste");
 
         //noroeste
-        box15.setNorthBox(null);
-        box15.setSouthBox(box27);
+        box3.setNorthBox(null);
+        box3.setSouthBox(box6);
 
-        box27.setNorthBox(box15);
-        box27.setSouthBox(box39);
+        box6.setNorthBox(box3);
+        box6.setSouthBox(box9);
 
         //suroeste
-        box39.setNorthBox(box27);
-        box39.setSouthBox(null);
+        box9.setNorthBox(box6);
+        box9.setSouthBox(null);
 
-        westPath.getPathBoxes().add(box15);
-        westPath.getPathBoxes().add(box27);
-        westPath.getPathBoxes().add(box39);
+        westPath.getPathBoxes().add(box3);
+        westPath.getPathBoxes().add(box6);
+        westPath.getPathBoxes().add(box9);
 
-        PathBox box17 = new PathBox(segundaEvaluacionUI.getButton(1),segundaEvaluacionUI.getHealthBar(1), "Noreste");
-        PathBox box29 = new PathBox(segundaEvaluacionUI.getButton(3),segundaEvaluacionUI.getHealthBar(3), "Este");
-        PathBox box41 = new PathBox(segundaEvaluacionUI.getButton(5),segundaEvaluacionUI.getHealthBar(5), "Sureste");
+        PathBox box5 = new PathBox(segundaEvaluacionUI.getButton(1),segundaEvaluacionUI.getHealthBar(1), "Noreste");
+        PathBox box8 = new PathBox(segundaEvaluacionUI.getButton(3),segundaEvaluacionUI.getHealthBar(3), "Este");
+        PathBox box11 = new PathBox(segundaEvaluacionUI.getButton(5),segundaEvaluacionUI.getHealthBar(5), "Sureste");
 
 
         //noreste
-        box17.setNorthBox(null);
-        box17.setSouthBox(box29);
+        box5.setNorthBox(null);
+        box5.setSouthBox(box8);
 
-        box29.setNorthBox(box17);
-        box29.setSouthBox(box41);
+        box8.setNorthBox(box5);
+        box8.setSouthBox(box11);
 
-        box41.setNorthBox(box29);
-        box41.setSouthBox(null);
+        box11.setNorthBox(box8);
+        box11.setSouthBox(null);
 
-        eastPath.getPathBoxes().add(box17);
-        eastPath.getPathBoxes().add(box29);
-        eastPath.getPathBoxes().add(box41);
+        eastPath.getPathBoxes().add(box5);
+        eastPath.getPathBoxes().add(box8);
+        eastPath.getPathBoxes().add(box11);
 
         castleOne.setLifeLabels(segundaEvaluacionUI.getVidasPlayerOneLabel());
         castleTwo.setLifeLabels(segundaEvaluacionUI.getVidasPlayerTwoLabel());

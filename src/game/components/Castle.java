@@ -22,7 +22,6 @@ public class Castle {
         } else {
             westPath.nextRound(playerId, this);
         }
-
         if(!eastPath.haveMonster(playerId)) {
             if(monsterIterator.hasNext()) {
                 eastPath.releaseMonster(playerId, monsterIterator.next());

@@ -21,7 +21,7 @@ import java.util.Arrays;
 public class Cadabra extends Monster {
     public Cadabra(String name) {
         this.life = 500;
-        this.maxLife = 500;
+        this.maxLife= 500;
         this.activeSkill = new Mindcrush();
         this.monsterName = name;
         this.types = Arrays.asList(Type.PSYCHIC, Type.DEMON);
@@ -38,6 +38,7 @@ public class Cadabra extends Monster {
     public void onDamageReceive(Integer damage, Monster monster) {
         if (RandomGenerator.getInstance().calculateDamage(0, 100) < 30) {
             System.out.println(this + " Le devuelve el ataque a " + monster);
+            monster.onDamageReceive(damage, this);
             return;
         }else{
             this.life = this.life - damage;
