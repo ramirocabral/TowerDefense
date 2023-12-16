@@ -11,6 +11,7 @@ public class EvilBeast extends Monster {
 
     public EvilBeast(String name) {
         this.life = 666;
+        this.maxLife = 666;
         this.monsterName = name;
         this.activeSkill = new Curse();
         this.types = Arrays.asList(Type.DEMON, Type.BEAST, Type.FIRE);

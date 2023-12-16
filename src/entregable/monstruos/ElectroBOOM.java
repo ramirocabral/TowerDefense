@@ -26,6 +26,7 @@ public class ElectroBOOM extends Monster{
 
     public ElectroBOOM(String name){
         this.life = 500;
+        this.maxLife = 500;
         this.activeSkill = skills.get(0);
         this.monsterName = name;
         this.types = Arrays.asList(Type.ELECTRIC);

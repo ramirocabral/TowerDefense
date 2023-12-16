@@ -24,6 +24,7 @@ public class Siren extends Monster {
 
     public Siren(String name) {
         this.life = 1200;
+        this.maxLife = 1200;
         this.activeSkill = new Wave();
         this.monsterName = name;
         this.types = Arrays.asList(Type.WATER, Type.RADIANT);

@@ -1,10 +1,11 @@
 import entregable.Comparators.NumberOfTypesComparator;
 import entregable.UI.InitialImage;
 import entregable.UI.Result;
-import entregable.monstruos.AbyssWalker;
+import entregable.monstruos.*;
 import game.components.Monster;
 import game.components.RumbleGame;
 import game.components.TieException;
+import game.monsters.EvilBeast;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -32,15 +33,16 @@ public class Main {
         rumbleGame.init();
 
         List<Monster> monstersOne = Arrays.asList(
-                new AbyssWalker("Nashe"),
-                new AbyssWalker("Nashe2"),
-                new AbyssWalker("Nashe3")
-
+                new Blaze("Blaze"),
+                new ElectroBOOM("ElectroBOOM"),
+                new Golem("Golem")
         );
         rumbleGame.getPlayerOne().setMonsters(monstersOne);
 
         List<Monster> monstersTwo = Arrays.asList(
-
+                new Cadabra("Cadabra"),
+                new EvilBeast("Evilbeast" ),
+                new Archangel("Archangel")
         );
         Collections.sort(monstersTwo, new NumberOfTypesComparator());
         rumbleGame.getPlayerTwo().setMonsters(monstersTwo);

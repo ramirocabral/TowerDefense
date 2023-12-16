@@ -24,6 +24,7 @@ public class Golem extends Monster{
 
     public Golem(String name) {
         this.life = 2000;
+        this.maxLife = 2000;
         this.activeSkill = new Flamethrower();
         this.monsterName = name;
         this.types = Arrays.asList(Type.FIRE);

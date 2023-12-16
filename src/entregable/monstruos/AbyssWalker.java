@@ -31,6 +31,7 @@ public class AbyssWalker extends Monster{
     private int  DamageMeter = 0;
     public AbyssWalker(String name) {
         this.life = 800;
+        this.maxLife = 800;
         this.activeSkill = skills.get(0);
         this.monsterName = name;
         this.types = Arrays.asList(Type.DEMON, Type.SWORD);

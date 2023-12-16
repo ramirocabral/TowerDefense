@@ -27,6 +27,7 @@ public class Cleric extends Monster {
 
     public Cleric(String name) {
         this.life = 400;
+        this.maxLife = 400;
         this.activeSkill = skills.get(0);
         this.monsterName = name;
         this.types = Arrays.asList(Type.RADIANT);

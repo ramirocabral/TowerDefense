@@ -27,6 +27,7 @@ public class Ninja extends Monster {
     private List<Attack> skills = Arrays.asList(new TsunamiPunch() , new KangarooKick());
     public Ninja(String name) {
         this.life = 500;
+        this.maxLife = 500;
         this.activeSkill = skills.get(0);
         this.monsterName = name;
         this.types = Arrays.asList(Type.WATER);

@@ -26,6 +26,7 @@ public class Archangel extends Monster {
     private boolean oneshot = true;
     public Archangel(String name) {
         this.life = 600;
+        this.maxLife = 600;
         this.activeSkill = skills.get(0);
         this.monsterName = name;
         this.types = Arrays.asList(Type.RADIANT, Type.FIRE, Type.SWORD);

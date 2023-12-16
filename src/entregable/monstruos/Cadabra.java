@@ -21,6 +21,7 @@ import java.util.Arrays;
 public class Cadabra extends Monster {
     public Cadabra(String name) {
         this.life = 500;
+        this.maxLife = 500;
         this.activeSkill = new Mindcrush();
         this.monsterName = name;
         this.types = Arrays.asList(Type.PSYCHIC, Type.DEMON);

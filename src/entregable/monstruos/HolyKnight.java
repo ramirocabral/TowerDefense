@@ -24,6 +24,7 @@ public class HolyKnight extends Monster {
 
     public HolyKnight(String name) {
         this.life = 570;
+        this.maxLife = 570;
         this.activeSkill = skills.get(0);
         this.monsterName = name;
         this.types = Arrays.asList(Type.RADIANT, Type.SWORD);

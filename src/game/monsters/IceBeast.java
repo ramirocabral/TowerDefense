@@ -17,6 +17,7 @@ public class IceBeast extends Monster {
 
     public IceBeast(String name) {
         this.life = 900;
+        this.maxLife = 900;
         this.monsterName = name;
         this.activeSkill = skills.get(0);
         this.types = Arrays.asList(Type.COLD, Type.BEAST);

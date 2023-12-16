@@ -28,6 +28,7 @@ public class Blaze extends Monster {
 
     public Blaze(String name) {
         this.life = 350;
+        this.maxLife = 350;
         this.activeSkill = skills.get(0);
         this.monsterName = name;
         this.types = Arrays.asList(Type.FIRE);
