@@ -4,7 +4,6 @@
 
 ## Descripción del Juego
 
-
 - **Jugadores:** <span style="color:red">Rojo</span> y <span style="color:blue">Azul</span>.
 - **Objetivo:** Defender tu torre mientras atacas la torre del enemigo.
 - **Carriles:** Dos carriles: Oeste y Este.
@@ -28,33 +27,50 @@
 - **Confrontación de Monstruos:** Los monstruos de jugadores opuestos se enfrentan cuando comparten una celda. El combate se resuelve a través de ataques recíprocos.
 - **Puntos de Salud:** Los monstruos tienen puntos de salud que disminuyen con cada ataque. Un monstruo es eliminado cuando su salud llega a cero.
 
-
-
-
+___
 
 ## Historia del juego
 
-Charlarlo entre todos y ponerlo aca
+Bienvenido a una experiencia única que fusiona la esencia de los tiempos actuales con un contexto 
+antiguo, donde castillos y estandartes se entrelazan con la presencia de monstruos de eras 
+pasadas. Este juego transporta a los jugadores a un mundo fascinante donde lo antiguo se 
+mezcla con lo moderno, creando un escenario inmersivo lleno de misterio y maravilla.
+
+### Roles
+
+En el universo de nuestro juego, los roles desempeñan un papel crucial en la estrategia y la 
+dinámica del juego. A continuación, presentamos una visualización clara de cómo interactúan los roles entre sí:
+
+![Contadores de Roles](assets/readme/counters.svg)
 
 
-## Personajes
+### Personajes
+
+Antes de profundizar en los detalles específicos de los roles, conozcamos a los héroes y villanos que dan vida a 
+esta emocionante trama. Cada personaje aporta su propio conjunto de habilidades y personalidad única al juego.
 
 
 
+<p align="center">
+  <img src="assets/monsters/Blaze.png" >
+</p>
+
+___
 
 ## Como jugar
 
 
+___
 
 ## Como compilar
 
 
-
+___
 ## Como ejecutar
 
 
 
-
+___
 ## Autores
 
 
