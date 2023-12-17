@@ -125,13 +125,14 @@ ___
 1. Utiliza el siguiente comando para clonar este repositorio en tu sistema:
 
 ``` bash
-git clone https://github.com/ramirocabral/tpfinal.git
+git clone https://github.com/ramirocabral/TowerDefense.git
 ```
 
-2. Navega al directorio del repositorio clonado, y luego al directorio donde se encuentra el archivo :
+2. Navega al directorio del repositorio clonado, y luego al directorio donde 
+se encuentra el archivo [Main](https://github.com/ramirocabral/TowerDefense/blob/main/src/Main.java):
 
 ``` bash
-cd tpfinal
+cd TowerDefense
 cd src
 ```
 
