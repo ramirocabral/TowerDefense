@@ -17,9 +17,9 @@ import java.util.List;
 
 /*
  * Nombre: Ninja
- * Tipo: Agua (Principal)
+ * Tipo: Agua (Principal), Espada (Secundario)
  * Vida: 500
- * Ataques: TsunamiPunch, KangarooKick
+ * Ataques: TsunamiPunch, KangarooKick, Wave, BladeSlash
  * Descripción: Maestro ninja con conexión única al elemento agua. Tiene 30% de chance de esquivar el ataque y
  * que no le hagan daño.
  * */

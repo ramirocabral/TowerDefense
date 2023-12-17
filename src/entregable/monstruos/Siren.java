@@ -11,9 +11,9 @@ import java.util.Arrays;
 /*
  * Nombre: Siren
  * Tipo: Agua (Principal), Radiante
- * Vida: 1200
+ * Vida: 900
  * Ataques: Wave
- * Descripción: Criatura mítica con canto hipnotizador. Cada turno por medio cura a un aliado 200 de vida como maximo,
+ * Descripción: Criatura mítica con canto hipnotizador. Cada turno por medio cura a un aliado 150 de vida como maximo,
  * si el aliado tiene la vida llena lo cura al maximo pero le saca 50 de vida del maximo que puede tener.
  * */
 
@@ -21,7 +21,7 @@ public class Siren extends Monster {
     private boolean heal;
 
     public Siren(String name) {
-        this.life = 1200;
+        this.life = 900;
         this.maxLife = this.life;
         this.activeSkill = new Wave();
         this.monsterName = name;
@@ -44,7 +44,7 @@ public class Siren extends Monster {
     }
 
     public void heal() {
-        this.setLife(this.life + 200);
+        this.setLife(this.life + 150);
         Player player = this.getPlayer();
         //obtenemos el monstruo aliado presente en la otra linea
         Monster m;

@@ -53,6 +53,8 @@ public class Main {
             Result resultUI = new Result(rumbleGame.getPlayerOne().getCastle().getLife(), rumbleGame.getPlayerTwo().getCastle().getLife(), rumbleGame.getRound());
             resultUI.setVisible(true);
         }catch (TieException e){
+            System.err.println(e.getMessage());
+            e.printStackTrace();
             Result resultUI = new Result(rumbleGame.getPlayerOne().getCastle().getLife(), rumbleGame.getPlayerTwo().getCastle().getLife(), rumbleGame.getRound());
             resultUI.setVisible(true);
         }

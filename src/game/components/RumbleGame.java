@@ -129,11 +129,11 @@ public class RumbleGame {
         }
         if(round == 100) {
             loopGame = false;
-            throw new TieException("Empate!");
+            throw new TieException("¡Empate por llegar a 100 rondas!");
         }
         if (loopGame && !checkMonsters()) {
             loopGame = false;
-            throw new TieException("Empate!");
+            throw new TieException("¡Empate por falta de monstruos!");
         }
     }
 
