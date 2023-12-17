@@ -46,8 +46,9 @@ public class Siren extends Monster {
     public void heal() {
         this.setLife(this.life + 200);
         Player player = this.getPlayer();
+        //obtenemos el monstruo aliado presente en la otra linea
         Monster m;
-        if ((player.getCastle().getEastPath().getMonster(player.getId()) != null) && player.getCastle().getEastPath().getMonster(player.getId()).equals(this)) {
+        if ((player.getCastle().getEastPath().contains(this))) {
             m = player.getCastle().getWestPath().getMonster(player.getId());
         }
         else {

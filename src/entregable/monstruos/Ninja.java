@@ -1,7 +1,9 @@
 package entregable.monstruos;
 
+import entregable.ataques.Sword.BladeSlash;
 import entregable.ataques.Water.KangarooKick;
 import entregable.ataques.Water.TsunamiPunch;
+import entregable.ataques.Water.Wave;
 import game.attacks.Attack;
 import game.components.Monster;
 import game.components.PathBox;
@@ -10,6 +12,7 @@ import game.types.Type;
 
 import javax.swing.*;
 import java.util.Arrays;
+import java.util.Iterator;
 import java.util.List;
 
 /*
@@ -22,21 +25,29 @@ import java.util.List;
  * */
 
 public class Ninja extends Monster {
-    private List<Attack> skills = Arrays.asList(new TsunamiPunch() , new KangarooKick());
+    private List<Attack> skills = Arrays.asList(new TsunamiPunch() , new KangarooKick(), new Wave(), new BladeSlash());
+
+    Iterator<Attack> iterator;
+
     public Ninja(String name) {
         this.life = 500;
         this.maxLife = this.life;
-        this.activeSkill = skills.get(0);
         this.monsterName = name;
-        this.types = Arrays.asList(Type.WATER);
+        this.types = Arrays.asList(Type.WATER,Type.SWORD);
         this.image = new ImageIcon("assets/monsters/ninja.png");
+        this.iterator = skills.iterator();
+        this.activeSkill = this.iterator.next();
     }
 
     @Override
     public void attack(Monster enemy) {
         int damage = this.activeSkill.damage(enemy);
-        System.out.println("--     ["+ this +"] ataca a [" + enemy + "] haciendole " + damage + " de daño");
+        System.out.println("--     ["+ this +"] ataca a [" + enemy + "] con ["+this.activeSkill.getClass()+"] haciendole " + damage + " de daño");
         enemy.onDamageReceive(damage, this);
+        if(!this.iterator.hasNext()) {
+            this.iterator = skills.iterator();
+        }
+        this.activeSkill = this.iterator.next();
     }
 
     // tiene 30% de chance que no le peguen
@@ -50,17 +61,6 @@ public class Ninja extends Monster {
             this.life = 0;
         }
         System.out.println(this + " fue herido, queda con " + this.life + " puntos de vida");
-    }
-
-    //rotamos las habilidades
-    @Override
-    public void move(PathBox oldPathBox, PathBox newPathBox) {
-        super.move(oldPathBox, newPathBox);
-        if(activeSkill instanceof TsunamiPunch) {
-            this.activeSkill = skills.get(1);
-        } else {
-            this.activeSkill = skills.get(0);
-        }
     }
 
 }

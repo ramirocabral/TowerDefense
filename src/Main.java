@@ -34,17 +34,15 @@ public class Main {
         rumbleGame.init();
 
         List<Monster> monstersOne = Arrays.asList(
-                new EvilBeast("EvilBeast"),
-                new ElectroBOOM("ElectroBOOM"),
-                new AbyssWalker("AbyssWalker")
-
+                new Ninja("Ninja1"),
+                new Siren("Siren1")
         );
 
         rumbleGame.getPlayerOne().setMonsters(monstersOne);
 
         List<Monster> monstersTwo = Arrays.asList(
-                new Siren("Siren"),
-                new CrowApostate("crow")
+                new Golem("Golem1"),
+                new Golem("Golem2")
         );
         Collections.sort(monstersTwo, new NumberOfTypesComparator());
         rumbleGame.getPlayerTwo().setMonsters(monstersTwo);

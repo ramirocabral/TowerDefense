@@ -7,6 +7,7 @@ import entregable.ataques.Electric.WattCharge;
 import game.attacks.Attack;
 import game.components.Monster;
 import game.components.PathBox;
+import game.random.RandomGenerator;
 import game.types.Type;
 
 import javax.swing.*;
@@ -25,10 +26,7 @@ import java.util.List;
 
 
 public class ElectroBOOM extends Monster{
-    private List<Attack> skills = Arrays.asList(new Discharge() , new Thunderstrike(), new WattCharge());
-    //iterator
-    private Iterator<Attack> skillsIterator = skills.iterator();
-
+    private List<Attack> skills = Arrays.asList(new Discharge() , new Thunderstrike());
     public ElectroBOOM(String name){
         this.life = 500;
         this.maxLife = this.life;
@@ -41,27 +39,23 @@ public class ElectroBOOM extends Monster{
     @Override
     public void attack(Monster enemy) {
         int damage;
-        if(this.life < 200 && this.life > 0){
-            this.activeSkill = skills.get(2);
-            damage = this.activeSkill.damage(this);
-            System.out.println("--     ["+ this +"] recarga " + damage + " de vida");
-            this.life = this.life + damage;
+        if(this.life < 200 && this.life > 0) {
+            heal();
+        }
+        damage = this.activeSkill.damage(enemy);
+        System.out.println("--     [" + this + "] ataca a [" + enemy + "] con "+this.activeSkill.getClass()+"haciendole " + damage + " de daño");
+        enemy.onDamageReceive(damage, this);
+        if (this.activeSkill == skills.get(0)) {
+            this.activeSkill = skills.get(1);
+        }
+        else{
             this.activeSkill = skills.get(0);
-        }else {
-            damage = this.activeSkill.damage(enemy);
-            System.out.println("--     [" + this + "] ataca a [" + enemy + "] haciendole " + damage + " de daño");
-            enemy.onDamageReceive(damage, this);
         }
     }
 
-    @Override
-    public void move(PathBox oldPathBox, PathBox newPathBox) {
-        super.move(oldPathBox, newPathBox);
-        if (!skillsIterator.hasNext()) {
-            skillsIterator = skills.iterator();  // vuelve al principio
-        }
-
-        this.activeSkill = skillsIterator.next();
-
+    public void heal(){
+        int increase =  RandomGenerator.getInstance().calculateDamage(50,100);
+        this.life = this.life + increase;
+        System.out.println("[ElectroBoom] se cura " + increase + " de vida");
     }
 }
