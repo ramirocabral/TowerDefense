@@ -13,24 +13,23 @@ import java.util.List;
 
 /*
  * Nombre: Archangel
- * Tipo: Radiante (Principal), Fuego
+ * Tipo: Radiante (Principal), Fuego (Secundario), Sword (Secundario)
  * Vida: 600
  * Ataques: CelestialSlash, FireNova
- * Descripción: El Archangel es un monstruo que se especializa en el uso de la espada. Su ataque principal es CelestialSlash,
- * el cual es un ataque que se basa en la fuerza del Archangel. Su segundo ataque es FireNova, el cual es un ataque que se basa
- * en la inteligencia del Archangel. El Archangel tiene la habilidad de hacer un ataque que mata a cualquier demonio de un solo
- * golpe. El Archangel es un monstruo que es invocado por Cleric con una probabilidad del 20% cuando este muere.
+ * Descripción: Mensajero celestial enviado para restaurar la paz. Su ataque principal es CelestialSlash, pero si
+ * se encuentra con un demonio, su ataque cambia a FireNova, el cual hace mucho más daño.
  * */
 public class Archangel extends Monster {
     private List<Attack> skills = Arrays.asList(new CelestialSlash(), new FireNova());
-    private boolean oneshot = true;
+    private boolean oneshot;
     public Archangel(String name) {
         this.life = 600;
-        this.maxLife= this.life;
+        this.maxLife = this.life;
         this.activeSkill = skills.get(0);
         this.monsterName = name;
         this.types = Arrays.asList(Type.RADIANT, Type.FIRE, Type.SWORD);
-        this.image = new ImageIcon("assets/monsters/Archangel.png");
+        this.image = new ImageIcon("assets/monsters/archangel.png");
+        this.oneshot = true;
     }
 
     @Override
@@ -50,11 +49,4 @@ public class Archangel extends Monster {
         newPathBox.setMonster(this);
     }
 
-    public List<Attack> getSkills(){
-        return skills;
-    }
-
-    public String getMonsterName(){
-        return monsterName;
-    }
 }

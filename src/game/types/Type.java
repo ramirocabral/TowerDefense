@@ -11,4 +11,5 @@ public enum Type {
     ELECTRIC,
     VENOM,
     RADIANT
+
 }

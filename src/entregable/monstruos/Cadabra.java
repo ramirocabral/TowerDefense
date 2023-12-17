@@ -13,15 +13,14 @@ import java.util.Arrays;
  * Tipo: Psiquico (Principal), Demonio (Secundario)
  * Vida: 500
  * Ataques: Mindcrush
- * Descripción: El Cadabra es un monstruo que se especializa en el uso de la magia con la mente. Su ataque principal es Mindcrush,
- * el cual es un ataque que se basa en la inteligencia del Cadabra. El Cadabra tiene la habilidad de devolver el ataque a su enemigo
- * con una probabilidad del 30%.
+ * Descripción: Hechicero solitario y poderoso. Tiene la habilidad de devolver el ataque a su enemigo con una
+ * probabilidad del 30%.
  * */
 
 public class Cadabra extends Monster {
     public Cadabra(String name) {
         this.life = 500;
-        this.maxLife= 500;
+        this.maxLife = this.life;
         this.activeSkill = new Mindcrush();
         this.monsterName = name;
         this.types = Arrays.asList(Type.PSYCHIC, Type.DEMON);

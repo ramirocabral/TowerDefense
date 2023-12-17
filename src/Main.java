@@ -19,7 +19,7 @@ public class Main {
         InitialImage initialImage = new InitialImage();
         initialImage.setVisible(true);
 
-        // Wait until the "Start" button is pressed
+        // Espera hasta que el boton de start sea presionado
         while (!initialImage.isStartPressed()) {
             try {
                 Thread.sleep(100);
@@ -60,7 +60,7 @@ public class Main {
 
         try {
             rumbleGame.startGame();
-            //movido desde RumbleGame para no romper el encapsulamiento
+            //Movido desde RumbleGame para no romper el encapsulamiento
             Result resultUI = new Result(rumbleGame.getPlayerOne().getCastle().getLife(), rumbleGame.getPlayerTwo().getCastle().getLife(), rumbleGame.getRound());
             resultUI.setVisible(true);
         }catch (TieException e){

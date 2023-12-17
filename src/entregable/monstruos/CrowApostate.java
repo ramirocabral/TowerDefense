@@ -3,6 +3,7 @@ package entregable.monstruos;
 import entregable.ataques.Demon.VoidSlash;
 import entregable.ataques.Electric.WattCharge;
 import entregable.ataques.Sword.BladeSlash;
+import entregable.ataques.Venom.VenomousSpit;
 import game.attacks.Attack;
 import game.components.Monster;
 import game.types.Type;
@@ -11,9 +12,17 @@ import javax.swing.*;
 import java.util.Arrays;
 import java.util.List;
 
+/*
+ * Nombre: CrowApostate
+ * Tipo: Veneno (Principal), Espada (Secundario)
+ * Vida: 600
+ * Ataques: BladeSlash, VenomousSpit
+ * Descripción: Ser oscuro en una catedral malévola.
+ * */
+
 public class CrowApostate extends Monster {
-    private List<Attack> skills = Arrays.asList(new BladeSlash());
-    private int comboMeter = 1;
+    private List<Attack> skills = Arrays.asList(new BladeSlash(), new VenomousSpit());
+    private int comboMeter;
 
     public CrowApostate(String name) {
         this.life = 600;
@@ -21,7 +30,8 @@ public class CrowApostate extends Monster {
         this.activeSkill = skills.get(0);
         this.monsterName = name;
         this.types = Arrays.asList(Type.VENOM, Type.SWORD);
-        this.image = new ImageIcon("assets/monsters/raven.png");
+        this.image = new ImageIcon("assets/monsters/crowApostate.png");
+        this.comboMeter = 1;
     }
 
     @Override
