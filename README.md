@@ -97,32 +97,24 @@ esta emocionante trama. Cada personaje aporta su propio conjunto de habilidades 
 
 A continuacion se presentan los personajes del juego:
 
-* **<span style="color:darkviolet">AbyssWalker</span>**: 
-* **<span style="color:orange">Archangel</span>**:
-* **<span style="color:red">Blaze</span>**:
-* **<span style="color:violet">Blob</span>**:
-* **<span style="color:pink">Cadabra</span>**:
-* **<span style="color:orange">Cleric</span>**:
-* **<span style="color:violet">CrowApostate</span>**:
-* **<span style="color:yellow">ElectroBOOM</span>**:
-* **<span style="color:darkviolet">EvilBeast</span>**:
-* **<span style="color:fire">Golem</span>**:
-* **<span style="color:orange">HolyKnight</span>**:
-* **<span style="color:lightblue">IceBeast</span>**:
-* **<span style="color:blue">Ninja</span>**:
-* **<span style="color:orange">Siren</span>**:
-* **<span style="color:grey">Spartan</span>**:
+* **<span style="color:darkviolet">AbyssWalker</span>**: AbyssWalker, cuyo verdadero nombre es desconocido, era en sus días anteriores un valiente guerrero que luchaba por la justicia y la paz en el reino. Sin embargo, su vida dio un giro oscuro cuando fue enviado en una misión para derrotar al malévolo EvilBeast. En la confrontación final, AbyssWalker se vio enfrentado a una elección crucial: sacrificarse para destruir a EvilBeast o sucumbir a la oscuridad. Optó por el sacrificio, pero en el proceso, su alma fue corrompida, y renació como un ser vinculado a las profundidades del abismo.
+* **<span style="color:orange">Archangel</span>**: Conocido como el mensajero celestial, Archangel es un ser divino enviado por los dioses para restaurar la paz en la tierra. Su presencia es invocada en tiempos de crisis, interviniendo como un rescatista en las batallas más desesperadas. Su propósito es luchar contra las fuerzas oscuras que amenazan con sumir al mundo en caos. Archangel es símbolo de esperanza y redención, guiando a aquellos que buscan la luz en medio de la oscuridad.
+* **<span style="color:red">Blaze</span>**: Blaze, un mago poderoso, buscaba desentrañar los misterios de la creación. En un experimento para crear vida a través de la magia, accidentalmente dio origen al Golem de Fuego, una criatura ígnea que escapó de su control. Ahora, Blaze, sintiéndose responsable de la creación del Golem, se embarca en una búsqueda para contener y redirigir el poder destructivo de la criatura. Utiliza sus habilidades mágicas para mantener al Golem bajo cierto grado de supervisión, aunque la tarea es difícil debido a la naturaleza indomable de la criatura.
+* **<span style="color:violet">Blob</span>**: Creado como un arma biológica para contrarrestar seres radiantes, Blob es una entidad amorfa con propiedades venenosas. Su origen se remonta a un laboratorio secreto donde científicos intentaban desarrollar un arma definitiva contra las fuerzas oscuras. Blob no tiene inclinaciones hacia el bien o el mal y, en cambio, busca la supervivencia en un mundo que lo percibe como una amenaza. Sus habilidades venenosas son una defensa natural, y su presencia en el campo de batalla puede ser tanto una bendición como una maldición, dependiendo de cómo se enfoque su poder.
+* **<span style="color:pink">Cadabra</span>**: Cadabra es un hechicero solitario y misterioso que prefiere la soledad. Su pasado está envuelto en secretos, pero su magia es innegablemente poderosa. Evita involucrarse en conflictos, pero cuando se ve obligado a actuar, su destreza mágica es una fuerza imparable.
+* **<span style="color:orange">Cleric</span>**: Residiendo en una antigua iglesia, Cleric es un invocador sagrado que posee la habilidad de llamar al Archangel en tiempos de necesidad. Su vida está dedicada a proteger el reino y luchar contra las fuerzas de la oscuridad que amenazan con invadir la tierra sagrada. Si bien su especialidad no es la lucha, pone todo de si en la batalla cuando se lo requiere.
+* **<span style="color:violet">CrowApostate</span>**: Descendiente de aves místicas, CrowApostate es un ser oscuro que reside en una catedral malévola. Su conexión con la oscuridad le otorga habilidades sombrías y un deseo de venganza. Su presencia se siente en la penumbra, y su historia se entrelaza con antiguos secretos de la magia negra.
+* **<span style="color:yellow">ElectroBOOM</span>**: Antaño un conocido youtuber de física, ElectroBOOM se electrocutó en un desafortunado experimento. En lugar de enfrentar la muerte, adquirió poderes de electricidad. Ahora, como maga elemental, utiliza sus habilidades para proteger el reino de amenazas sobrenaturales.
+* **<span style="color:brown">EvilBeast</span>**: EvilBeast es la encarnación misma de la oscuridad. Antaño un ser benevolente, su corazón fue corrompido por fuerzas malignas, convirtiéndolo en una criatura sedienta de destrucción. Su origen está envuelto en misterio, pero se cree que siempre fue un ser del mal.
+* **<span style="color:red">Golem</span>**: Golem, nacido de la ambición del mago Blaze, es una criatura de fuego imparable. Originalmente creado para ser controlado, el Golem se liberó de las ataduras de Blaze durante un experimento que salió mal. Ahora, vaga por el reino como una fuerza de destrucción incontrolada. Aunque su naturaleza es caótica, el Golem puede ser dirigido hacia el mal que amenaza el reino, convirtiéndolo en un aliado incierto pero poderoso.
+* **<span style="color:orange">HolyKnight</span>**: HolyKnight es un caballero valiente que ha jurado proteger el reino de toda oscuridad. Armado con una espada sagrada y una armadura resplandeciente, HolyKnight personifica la virtud y la justicia. Su lealtad al bien lo lleva a enfrentarse a las fuerzas del mal con valentía y honor, sirviendo como un faro de esperanza para aquellos que lo siguen.
+* **<span style="color:lightblue">IceBeast</span>**: IceBeast es una criatura majestuosa nacida de las heladas tierras del norte. Su presencia trae consigo una ola de frío intenso, capaz de congelar todo a su paso. Aunque no tiene una inclinación malévola, IceBeast es convocado en tiempos desesperados para detener el avance de las fuerzas oscuras con su aliento gélido y su fuerza titánica.
+* **<span style="color:blue">Ninja</span>**: Ninja, maestro de las artes marciales y sigiloso protector, ha desarrollado una conexión única con el elemento agua. Su entrenamiento incluyó técnicas ancestrales que fusionan las habilidades del ninja con la fluidez del agua. En lugar de las sombras, el Ninja se desliza entre las corrientes y los reflejos líquidos, camuflándose en ambientes acuáticos para proteger sus propios intereses y garantizar el equilibrio en el reino.
+* **<span style="color:orange">Siren</span>**: Siren, una criatura mítica que habita cerca del reino radiante, es conocida por su canto hipnotizador y su belleza cautivadora. Aunque su aspecto podría sugerir peligro, Siren no es inherentemente malévola. Su historia se remonta a un tiempo en que vivía en armonía con las fuerzas de la luz. Sin embargo, eventos pasados la han dejado sola y buscando conexión con aquellos que puedan comprender su verdadera naturaleza. Su canto puede tanto encantar como proteger, dependiendo de la intención de quien lo escuche.
+* **<span style="color:grey">Spartan</span>**: Spartan, un guerrero imponente, es conocido por su lealtad inquebrantable al bien. Educado en las artes de la guerra desde temprana edad, Spartan es la personificación de la valentía y la disciplina. Su armadura reluce con la luz de la justicia, y su habilidad con la espada es incomparable. Se le llama en momentos críticos para liderar la defensa contra las hordas enemigas y mantener la esperanza en los corazones de los guerreros.
 
 
-
-<!-- 
-
-<p align="center">
-  <img src="assets/monsters/blaze.png" >
-</p>
--->
-![Blaze - Monstruo Antiguo](assets/monsters/blaze.png)
-
+![Personajes](assets/readme/characters.svg)
 
 
 ___
@@ -130,24 +122,49 @@ ___
 ## Como jugar
 
 
-___
+1. Utiliza el siguiente comando para clonar este repositorio en tu sistema:
 
-## Como compilar
+``` bash
+git clone https://github.com/ramirocabral/tpfinal.git
+```
 
+2. Navega al directorio del repositorio clonado, y luego al directorio donde se encuentra el archivo :
 
-___
-## Como ejecutar
+``` bash
+cd tpfinal
+cd src
+```
 
+3. Compilar:
 
+``` bash
+javac Main.java
+```
+
+4. Ejecutar:
+``` bash
+java Main
+```
 
 ___
 ## Autores
 
+Este proyecto fue desarrollado por:
 
+- **[@ramirocabral](https://github.com/ramirocabral)**
+- **[@ManuSavenia](https://github.com/ManuSavenia)**
+- **[@gonblas](https://github.com/gonblas)**
 
+___
 
-## Licencia
+## ¡Gracias por Visitar!
 
+Gracias por explorar nuestro repositorio. Esperamos que disfrutes de 
+la experiencia del juego. Si tienes preguntas, sugerencias o simplemente
+quieres decir hola, no dudes en abrir un problema o ponerte en contacto 
+con nosotros.
+
+✨ ¡Que tengas un día increíble! ✨
 
 
 

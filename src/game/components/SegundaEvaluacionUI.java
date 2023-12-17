@@ -233,7 +233,7 @@ public class SegundaEvaluacionUI extends JFrame {
             JPanel panel = new JPanel();
             panel.setOpaque(true);
             panel.setBackground(new Color(0,0,0,0));
-//            panel.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+//          panel.setBorder(BorderFactory.createLineBorder(Color.BLACK));
             panelList.add(panel);
         }
     }

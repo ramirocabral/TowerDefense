@@ -19,7 +19,7 @@ public class Main {
         InitialImage initialImage = new InitialImage();
         initialImage.setVisible(true);
 
-        // Wait until the "Start" button is pressed
+        // Espera hasta que el boton de start sea presionado
         while (!initialImage.isStartPressed()) {
             try {
                 Thread.sleep(100);

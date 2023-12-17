@@ -23,7 +23,7 @@ public class EvilBeast extends Monster {
         this.maxLife= 666;
         this.monsterName = name;
         this.activeSkill = new Curse();
-        this.types = Arrays.asList(Type.DEMON, Type.BEAST, Type.FIRE);
+        this.types = Arrays.asList(Type.BEAST, Type.DEMON, Type.FIRE);
         this.image = new ImageIcon("assets/monsters/evilBeast.png");
     }
 

@@ -85,9 +85,9 @@ public class InitialImage extends JFrame {
 
         /*
         * Se agrega la imagen de fondo.
-         */
+        * */
 
-        ImageIcon backgroundImage = new ImageIcon("assets/towerDefense.jpg");
+        ImageIcon backgroundImage = new ImageIcon("assets/initialBackground.jpg");
         JLabel backgroundLabel = new JLabel(backgroundImage);
         backgroundLabel.setBounds(0, 0, getWidth(), getHeight());
         add(backgroundLabel);
