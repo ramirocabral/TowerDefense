@@ -12,16 +12,14 @@ import java.util.Arrays;
  * Tipo: Sword (Principal)
  * Vida: 600
  * Ataques: Slice
- * Descripción: El Spartan es un monstruo que se especializa en el uso de la espada. Su ataque principal es Slice
- * el cual es un ataque que se basa en su condicion como guerrero.
+ * Descripción: Guerrero imponente y leal al bien.
  * */
 
 
 public class Spartan extends Monster {
-
     public Spartan(String name) {
         this.life = 600;
-        this.maxLife=600;
+        this.maxLife = this.life;
         this.activeSkill = new Slice();
         this.monsterName = name;
         this.types = Arrays.asList(Type.SWORD);

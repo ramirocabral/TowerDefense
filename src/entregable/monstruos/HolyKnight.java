@@ -12,23 +12,23 @@ import java.util.List;
 
 /*
  * Nombre: HolyKnight
- * Tipo: Radiante (Principal), Espada
+ * Tipo: Radiante (Principal), Espada (Secundario)
  * Vida: 570
  * Ataques: Slice, HolyLight
- * Descripción: (relacionar con el HollowKnight) El HolyKnight es un monstruo que se especializa en el uso de la espada.
- * Su ataque principal es Slice, el cual es un ataque que se basa en su pasado como caballero.
+ * Descripción: Caballero valiente con espada sagrada. Cuando este muere, revive con 1 de vida (solo la primera vez).
  * */
 
 public class HolyKnight extends Monster {
     private List<Attack> skills = Arrays.asList(new Slice(), new HolyLight());
-    private boolean revive = true;
+    private boolean revive;
     public HolyKnight(String name) {
         this.life = 570;
-        this.maxLife= 570;
+        this.maxLife = this.life;
         this.activeSkill = skills.get(0);
         this.monsterName = name;
         this.types = Arrays.asList(Type.RADIANT, Type.SWORD);
         this.image = new ImageIcon("assets/monsters/holyKnight.png");
+        this.revive = true;
     }
 
     @Override
@@ -48,14 +48,12 @@ public class HolyKnight extends Monster {
             if(revive) {
                 this.life = 1;
                 revive = false;
+                System.out.println(this + " fue herido, queda con " + this.life + " puntos de vida debido a que revive");
+                return;
             }
-            else {
-                this.life = 0;
-            }
+            this.life = 0;
         }
         System.out.println(this + " fue herido, queda con " + this.life + " puntos de vida");
     }
-
-
 
 }

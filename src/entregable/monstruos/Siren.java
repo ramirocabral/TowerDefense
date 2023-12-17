@@ -13,10 +13,8 @@ import java.util.Arrays;
  * Tipo: Agua (Principal), Radiante
  * Vida: 1200
  * Ataques: Wave
- * La siren es curandera
- * Descripción: La Siren es un monstruo que se caracteriza por su compañerismo. Su ataque principal es Wave,
- * el cual es un ataque que se basa en su condicion como monstruo de agua. La Siren tiene la habilidad de curar a su equipo
- * cada dos turnos.
+ * Descripción: Criatura mítica con canto hipnotizador. Cada turno por medio cura a un aliado 200 de vida como maximo,
+ * si el aliado tiene la vida llena lo cura al maximo pero le saca 50 de vida del maximo que puede tener.
  * */
 
 public class Siren extends Monster {
@@ -24,7 +22,7 @@ public class Siren extends Monster {
 
     public Siren(String name) {
         this.life = 1200;
-        this.maxLife=1200;
+        this.maxLife = this.life;
         this.activeSkill = new Wave();
         this.monsterName = name;
         this.types = Arrays.asList(Type.WATER, Type.RADIANT);
@@ -56,6 +54,15 @@ public class Siren extends Monster {
             m = player.getCastle().getEastPath().getMonster(player.getId());
         }
         if (m != null) {
+            if(m.getLife() + 200 > m.getMaxLife()) {
+                if(m.getMaxLife() > 50){
+                    m.setMaxLife(m.getMaxLife() - 50);
+                }
+                m.setLife(m.getMaxLife());
+            }
+            else{
+                m.setLife(m.getLife() + 200);
+            }
             m.setLife(m.getLife() + 200);
             System.out.println(this.toString() + " cura a " + m.toString() + " 200 de vida.");
         }

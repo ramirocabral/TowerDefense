@@ -1,6 +1,7 @@
 package entregable.monstruos;
 
 import entregable.ataques.Electric.Discharge;
+import entregable.ataques.Electric.Electric;
 import entregable.ataques.Electric.Thunderstrike;
 import entregable.ataques.Electric.WattCharge;
 import game.attacks.Attack;
@@ -9,7 +10,9 @@ import game.components.PathBox;
 import game.types.Type;
 
 import javax.swing.*;
+import javax.swing.text.html.HTMLDocument;
 import java.util.Arrays;
+import java.util.Iterator;
 import java.util.List;
 
 /*
@@ -17,17 +20,18 @@ import java.util.List;
  * Tipo: Electrico (Principal)
  * Vida: 500
  * Ataques: Discharge, Thunderstrike
- * Descripción: El ElectroBOOM es un monstruo que se especializa en el uso de la fisica, basada en su pasado como Youtuber.
- * Su ataque principal es Discharge, el cual es un ataque que se basa en su pasado como fisico.
+ * Descripción: Youtuber convertido en maga elemental de electricidad. Si su vida es menor a 200, se cura.
  * */
 
 
 public class ElectroBOOM extends Monster{
     private List<Attack> skills = Arrays.asList(new Discharge() , new Thunderstrike(), new WattCharge());
+    //iterator
+    private Iterator<Attack> skillsIterator = skills.iterator();
 
     public ElectroBOOM(String name){
         this.life = 500;
-        this.maxLife=500;
+        this.maxLife = this.life;
         this.activeSkill = skills.get(0);
         this.monsterName = name;
         this.types = Arrays.asList(Type.ELECTRIC);
@@ -53,10 +57,11 @@ public class ElectroBOOM extends Monster{
     @Override
     public void move(PathBox oldPathBox, PathBox newPathBox) {
         super.move(oldPathBox, newPathBox);
-        if(activeSkill instanceof Discharge) {
-            this.activeSkill = skills.get(1);
-        } else {
-            this.activeSkill = skills.get(0);
+        if (!skillsIterator.hasNext()) {
+            skillsIterator = skills.iterator();  // vuelve al principio
         }
+
+        this.activeSkill = skillsIterator.next();
+
     }
 }

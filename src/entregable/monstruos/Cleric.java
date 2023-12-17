@@ -15,26 +15,27 @@ import java.util.List;
 
 /*
  * Nombre: Cleric
- * Tipo: Radiante (Principal), Demonio
+ * Tipo: Radiante (Principal)
  * Vida: 400
  * Ataques: HolyLight
- * Descripción: El Cleric es un monstruo que se especializa en el poder celestial. Su ataque principal es HolyLight, el cual
- * es un ataque que se basa en su pasado como sacerdote. El Cleric tiene la habilidad de invocar a un Archangel con una probabilidad
- * del 20% cuando muere.
+ * Descripción: Invocador sagrado en la antigua iglesia. Cuando este muere puede invocar a un arcángel que lo
+ * reemplaza en la batalla.
  * */
 
 public class Cleric extends Monster {
     private List<Attack> skills = Arrays.asList(new HolyLight());
     private boolean oneshot = true;
-    private boolean archangelMode = false;
+    private boolean archangelMode;
 
     public Cleric(String name) {
         this.life = 400;
-        this.maxLife = 400;
+        this.maxLife = this.life;
         this.activeSkill = skills.get(0);
         this.monsterName = name;
         this.types = Arrays.asList(Type.RADIANT);
         this.image = new ImageIcon("assets/monsters/cleric.png");
+        this.oneshot = true;
+        this.archangelMode = false;
     }
 
     private void GodCall() {
@@ -59,7 +60,6 @@ public class Cleric extends Monster {
             return ;
         }
         enemy.onDamageReceive(damage, this);
-
     }
     @Override
     public void onDamageReceive(Integer damage, Monster monster) {
@@ -67,7 +67,7 @@ public class Cleric extends Monster {
         if(this.life <= 0) {
             this.life = 0;
             int probability = RandomGenerator.getInstance().calculateDamage(0,100);
-            if(probability <= 100 && !archangelMode){
+            if((probability <= 100) && (!archangelMode)){
                 GodCall();
             }
         }

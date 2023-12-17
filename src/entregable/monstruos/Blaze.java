@@ -18,9 +18,7 @@ import java.util.List;
  * Tipo: Fuego (Principal)
  * Vida: 350
  * Ataques: FireBall, Flamethrower
- * Descripción: El Blaze es un monstruo que se especializa en el uso de la magia. Su ataque principal es FireBall, el cual
- * es un ataque que se basa en su pasado como mago. Su segundo ataque es Flamethrower, el cual es un ataque que se basa en
- * su condicion como monstruo de fuego. El Blaze tiene la habilidad de potenciar su ataque a medida que aumentan las rondas.
+ * Descripción: Mago creador del Golem de Fuego. A medida que pasan las rondas, Blaze se vuelve más poderoso.
  * */
 
 public class Blaze extends Monster {
@@ -28,7 +26,7 @@ public class Blaze extends Monster {
 
     public Blaze(String name) {
         this.life = 350;
-        this.maxLife=this.life;
+        this.maxLife = this.life;
         this.activeSkill = skills.get(0);
         this.monsterName = name;
         this.types = Arrays.asList(Type.FIRE);

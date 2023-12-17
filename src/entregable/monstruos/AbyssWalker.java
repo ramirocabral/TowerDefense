@@ -13,28 +13,26 @@ import java.util.List;
 
 /*
 * Nombre: AbyssWalker
-* Tipo: Demonio (Principal), Espada
+* Tipo: Demonio (Principal), Espada (Secundario)
 * Vida: 800
 * Ataques: VoidSlash, PoisonCover
-* Descripción: El AbyssWalker es un demonio que se especializa en el uso de la espada. Su ataque principal es VoidSlash, el cual
-* es un ataque que se basa en la fuerza del AbyssWalker. Su segundo ataque es PoisonCover, el cual es un ataque que se basa en la
-* inteligencia del AbyssWalker. El AbyssWalker tiene la habilidad de curarse a si mismo cuando su vida es menor a 200.
-* El AbyssWalker tiene un medidor de daño, el cual se llena cada vez que el AbyssWalker ataca. Cuando el medidor de daño se llena,
-* el AbyssWalker potencia su ataque.
+* Descripción: Valiente guerrero corrompido por su sacrificio contra EvilBeast. A medida que hace daño, va
+* cargando su medidor de daño, el cual al llenarse, potencia su ataque.
 * */
 
 public class AbyssWalker extends Monster{
 
     private List<Attack> skills = Arrays.asList(new VoidSlash());
     private final int DAMAGEMAX = 400;
-    private int  DamageMeter = 0;
+    private int DamageMeter;
     public AbyssWalker(String name) {
         this.life = 800;
-        this.maxLife= 800;
+        this.maxLife = this.life;
         this.activeSkill = skills.get(0);
         this.monsterName = name;
         this.types = Arrays.asList(Type.DEMON, Type.SWORD);
         this.image = new ImageIcon("assets/monsters/abyssWalker.png");
+        this.DamageMeter = 0;
     }
 
     @Override

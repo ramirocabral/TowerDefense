@@ -12,11 +12,10 @@ import java.util.Arrays;
 import java.util.List;
 /*
  * Nombre: IceBeast
- * Tipo: Cold (Principal)
+ * Tipo: Cold (Principal), Beast (Secundario)
  * Vida: 900
  * Ataques: ColdBreath, IceSpike
- * Descripción: El IceBeast es un monstruo que se especializa en el uso de la magia. Su ataque principal es ColdBreath
- * el cual es un ataque que se basa en su condicion como monstruo de hielo.
+ * Descripción: Criatura majestuosa de las heladas tierras del norte.
  * */
 
 
@@ -26,7 +25,7 @@ public class IceBeast extends Monster {
 
     public IceBeast(String name) {
         this.life = 900;
-        this.maxLife= 900;
+        this.maxLife = this.life;
         this.monsterName = name;
         this.activeSkill = skills.get(0);
         this.types = Arrays.asList(Type.COLD, Type.BEAST);
