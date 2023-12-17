@@ -36,24 +36,15 @@ public class Main {
         List<Monster> monstersOne = Arrays.asList(
                 new EvilBeast("EvilBeast"),
                 new ElectroBOOM("ElectroBOOM"),
-                new AbyssWalker("AbyssWalker"),
-                new Blob("Blob"),
-                new Spartan("Spartan"),
-                new IceBeast("IceBeast"),
-                new Ninja("Ninja"),
-                new Blaze("Blaze")
+                new AbyssWalker("AbyssWalker")
+
         );
 
         rumbleGame.getPlayerOne().setMonsters(monstersOne);
 
         List<Monster> monstersTwo = Arrays.asList(
                 new Siren("Siren"),
-                new CrowApostate("crow"),
-                new Cadabra("Cadabra"),
-                new Ninja("Ninja"),
-                new Golem("Golem"),
-                new Cleric("Cleric"),
-                new HolyKnight("HolyKnight")
+                new CrowApostate("crow")
         );
         Collections.sort(monstersTwo, new NumberOfTypesComparator());
         rumbleGame.getPlayerTwo().setMonsters(monstersTwo);
@@ -64,7 +55,8 @@ public class Main {
             Result resultUI = new Result(rumbleGame.getPlayerOne().getCastle().getLife(), rumbleGame.getPlayerTwo().getCastle().getLife(), rumbleGame.getRound());
             resultUI.setVisible(true);
         }catch (TieException e){
-            System.exit(0);
+            Result resultUI = new Result(rumbleGame.getPlayerOne().getCastle().getLife(), rumbleGame.getPlayerTwo().getCastle().getLife(), rumbleGame.getRound());
+            resultUI.setVisible(true);
         }
     }
 }

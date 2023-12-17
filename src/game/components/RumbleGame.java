@@ -129,6 +129,7 @@ public class RumbleGame {
         }
         if(round == 100) {
             loopGame = false;
+            throw new TieException("Empate!");
         }
         if (loopGame && !checkMonsters()) {
             loopGame = false;
@@ -155,7 +156,7 @@ public class RumbleGame {
                 throw new RuntimeException(e);
             }
             catch(TieException e) {
-                break;
+                throw new TieException(e.getMessage());
             }
         }
     }
