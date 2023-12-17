@@ -44,7 +44,7 @@ public class Cleric extends Monster {
         this.activeSkill = skills.get(0);
         this.monsterName = "Archangel";
         this.types = Arrays.asList(Type.RADIANT, Type.FIRE, Type.SWORD);
-        this.image = new ImageIcon("assets/monsters/Archangel.png");
+        this.image = new ImageIcon("assets/monsters/archangel.png");
     }
 
     @Override

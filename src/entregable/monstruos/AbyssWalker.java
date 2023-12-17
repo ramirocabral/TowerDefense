@@ -34,7 +34,7 @@ public class AbyssWalker extends Monster{
         this.activeSkill = skills.get(0);
         this.monsterName = name;
         this.types = Arrays.asList(Type.DEMON, Type.SWORD);
-        this.image = new ImageIcon("assets/monsters/AbyssWalker.png");
+        this.image = new ImageIcon("assets/monsters/abyssWalker.png");
     }
 
     @Override

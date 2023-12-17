@@ -28,7 +28,7 @@ public class Siren extends Monster {
         this.activeSkill = new Wave();
         this.monsterName = name;
         this.types = Arrays.asList(Type.WATER, Type.RADIANT);
-        this.image = new ImageIcon("assets/monsters/nami.png");
+        this.image = new ImageIcon("assets/monsters/siren.png");
         this.heal = false;
     }
 

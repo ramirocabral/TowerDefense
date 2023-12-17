@@ -21,7 +21,7 @@ public class CrowApostate extends Monster {
         this.activeSkill = skills.get(0);
         this.monsterName = name;
         this.types = Arrays.asList(Type.VENOM, Type.SWORD);
-        this.image = new ImageIcon("assets/monsters/raven.png");
+        this.image = new ImageIcon("assets/monsters/crowApostate.png");
     }
 
     @Override

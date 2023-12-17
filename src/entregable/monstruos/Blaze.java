@@ -32,7 +32,7 @@ public class Blaze extends Monster {
         this.activeSkill = skills.get(0);
         this.monsterName = name;
         this.types = Arrays.asList(Type.FIRE);
-        this.image = new ImageIcon("assets/monsters/Blaze.png");
+        this.image = new ImageIcon("assets/monsters/blaze.png");
     }
 
     @Override

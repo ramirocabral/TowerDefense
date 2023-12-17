@@ -31,7 +31,7 @@ public class ElectroBOOM extends Monster{
         this.activeSkill = skills.get(0);
         this.monsterName = name;
         this.types = Arrays.asList(Type.ELECTRIC);
-        this.image = new ImageIcon("assets/monsters/wizard.png");
+        this.image = new ImageIcon("assets/monsters/electroBOOM.png");
     }
 
     @Override
