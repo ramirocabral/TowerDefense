@@ -1,6 +1,7 @@
 package entregable.ataques;
 
 import game.types.Type;
+
 import java.util.HashMap;
 
 /*
@@ -24,7 +25,6 @@ public enum Multipliers {
     /*
     * Constructor de Multipliers
     * */
-
     Multipliers(HashMap<Type, Double> typeDoubleHashMap) {
         this.mult = typeDoubleHashMap;
     }
@@ -32,7 +32,6 @@ public enum Multipliers {
    /*
    * Metodo que inicializa el HashMap de Multipliers
    * */
-
     public static HashMap<Type, Double> initialize(Object... keyValuePairs) throws IllegalArgumentException{
         if (keyValuePairs.length % 2 != 0)
             throw new IllegalArgumentException("Invalid key value pair");
@@ -47,7 +46,6 @@ public enum Multipliers {
     * Metodo que devuelve el multiplicador de un tipo de monstruo. Puesto que solo se inicializaron los multiplicadores para los
     * counters de cada tipo de monstruo, si el tipo no tiene multiplicador, se devuelve 1.0
     * */
-
     public Double getMultiplier(Type type){
         if (!mult.containsKey(type))
             return 1.0;

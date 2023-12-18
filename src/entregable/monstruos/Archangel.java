@@ -23,7 +23,7 @@ public class Archangel extends Monster {
     private List<Attack> skills = Arrays.asList(new CelestialSlash(), new FireNova());
     private boolean oneshot;
     public Archangel(String name) {
-        this.life = 600;
+        this.life = 700;
         this.maxLife = this.life;
         this.activeSkill = skills.get(0);
         this.monsterName = name;

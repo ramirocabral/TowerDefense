@@ -23,7 +23,6 @@ public class Result extends JFrame {
     * Constructor de la clase.
     * */
     public Result(int castleRedLife, int castleBlueLife, int rounds) {
-
         /*
         * Se establece el icono de la ventana y se carga la fuente personalizada.
         * */
@@ -192,5 +191,14 @@ public class Result extends JFrame {
 
         return button;
     }
+    /*
+       Metodo main para probar la interfaz grafica
+     * */
+    public static void main(String[] args) {
+        Result result = new Result(1, 2, 16);
+        result.setVisible(true);
+    }
+
+
 
 }

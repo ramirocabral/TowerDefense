@@ -1,7 +1,6 @@
 package entregable.monstruos;
 
 import entregable.ataques.Demon.VoidSlash;
-import entregable.ataques.Electric.WattCharge;
 import game.attacks.Attack;
 import game.components.Monster;
 import game.types.Type;
@@ -37,7 +36,6 @@ public class AbyssWalker extends Monster{
 
     @Override
     public void attack(Monster enemy) {
-
         int damage = this.activeSkill.damage(enemy);
         DamageMeter += damage;
         if (DamageMeter >= DAMAGEMAX) {

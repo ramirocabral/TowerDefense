@@ -1,10 +1,11 @@
 package entregable.ataques.Fire;
 
 import entregable.ataques.Multipliers;
+import game.attacks.Fire;
 import game.components.Monster;
 
 
-public class Flamethrower implements Fire{
+public class Flamethrower implements Fire {
     @Override
     public int damage(Monster monster) {
         int damage = 100;

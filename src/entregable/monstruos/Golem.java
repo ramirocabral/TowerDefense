@@ -44,6 +44,7 @@ public class Golem extends Monster{
             super.move(oldPathBox, newPathBox);
             movement_enabled = false;
         } else {
-             movement_enabled = true;        }
+             movement_enabled = true;
+        }
     }
 }

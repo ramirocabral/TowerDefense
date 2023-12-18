@@ -44,7 +44,9 @@ public class Blob extends Monster{
         if(this.life < 0) {
             this.life = 0;
             this.activeSkill = skills.get(1);
-            attack(monster);
+            if(monster.getLife() > 0){
+                attack(monster);
+            }
         }
         System.out.println(this + " fue herido, queda con " + this.life + " puntos de vida");
     }

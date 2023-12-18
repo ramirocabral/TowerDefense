@@ -5,7 +5,6 @@ import entregable.ataques.Radiant.CelestialSlash;
 import entregable.ataques.Radiant.HolyLight;
 import game.attacks.Attack;
 import game.components.Monster;
-import game.components.PathBox;
 import game.random.RandomGenerator;
 import game.types.Type;
 
@@ -19,7 +18,7 @@ import java.util.List;
  * Vida: 400
  * Ataques: HolyLight
  * Descripción: Invocador sagrado en la antigua iglesia. Cuando este muere puede invocar a un arcángel que lo
- * reemplaza en la batalla.
+ * reemplaza en la batalla con una probabilidad del 25%.
  * */
 
 public class Cleric extends Monster {
@@ -39,7 +38,7 @@ public class Cleric extends Monster {
     }
 
     private void GodCall() {
-        this.life = 600;
+        this.life = 700;
         this.maxLife = this.life;
         skills = Arrays.asList(new CelestialSlash(), new FireNova());
         this.activeSkill = skills.get(0);
@@ -67,7 +66,7 @@ public class Cleric extends Monster {
         if(this.life <= 0) {
             this.life = 0;
             int probability = RandomGenerator.getInstance().calculateDamage(0,100);
-            if((probability <= 100) && (!archangelMode)){
+            if((probability <= 25) && (!archangelMode)){
                 GodCall();
             }
         }

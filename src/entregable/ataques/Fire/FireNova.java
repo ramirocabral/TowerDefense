@@ -1,6 +1,7 @@
 package entregable.ataques.Fire;
 
 import entregable.ataques.Multipliers;
+import game.attacks.Fire;
 import game.components.Monster;
 
 public class FireNova implements Fire {

@@ -15,7 +15,7 @@ import java.util.List;
  * Tipo: Radiante (Principal), Espada (Secundario)
  * Vida: 570
  * Ataques: Slice, HolyLight
- * Descripción: Caballero valiente con espada sagrada. Cuando este muere, revive con 1 de vida (solo la primera vez).
+ * Descripción: Caballero valiente con espada sagrada. Cuando este muere, revive con 1 de vida (solo una unico vez).
  * */
 
 public class HolyKnight extends Monster {

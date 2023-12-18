@@ -1,6 +1,7 @@
 package entregable.ataques.Sword;
 
 import entregable.ataques.Multipliers;
+import game.attacks.Sword;
 import game.components.Monster;
 import game.random.RandomGenerator;
 

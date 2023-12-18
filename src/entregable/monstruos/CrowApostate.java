@@ -1,7 +1,5 @@
 package entregable.monstruos;
 
-import entregable.ataques.Demon.VoidSlash;
-import entregable.ataques.Electric.WattCharge;
 import entregable.ataques.Sword.BladeSlash;
 import entregable.ataques.Venom.VenomousSpit;
 import game.attacks.Attack;
@@ -17,7 +15,8 @@ import java.util.List;
  * Tipo: Veneno (Principal), Espada (Secundario)
  * Vida: 600
  * Ataques: BladeSlash, VenomousSpit
- * Descripción: Ser oscuro en una catedral malévola.
+ * Descripción: Ser oscuro en una catedral malévola. Tiene una cierta probabilidad de realizar combos, lo cual lo hace
+ * muy peligroso.
  * */
 
 public class CrowApostate extends Monster {

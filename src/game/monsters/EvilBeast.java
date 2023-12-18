@@ -14,7 +14,6 @@ import java.util.Arrays;
  * Descripción: Encarnación de la oscuridad.
  * */
 
-
 public class EvilBeast extends Monster {
 
     public EvilBeast(String name) {
@@ -25,8 +24,6 @@ public class EvilBeast extends Monster {
         this.types = Arrays.asList(Type.BEAST, Type.DEMON, Type.FIRE);
         this.image = new ImageIcon("assets/monsters/evilBeast.png");
     }
-
-
 
     @Override
     public void attack(Monster enemy) {

@@ -6,7 +6,6 @@ import entregable.ataques.Water.TsunamiPunch;
 import entregable.ataques.Water.Wave;
 import game.attacks.Attack;
 import game.components.Monster;
-import game.components.PathBox;
 import game.random.RandomGenerator;
 import game.types.Type;
 
@@ -44,6 +43,8 @@ public class Ninja extends Monster {
         int damage = this.activeSkill.damage(enemy);
         System.out.println("--     ["+ this +"] ataca a [" + enemy + "] con ["+this.activeSkill.getClass()+"] haciendole " + damage + " de daño");
         enemy.onDamageReceive(damage, this);
+
+        //Cada vez que ataca cambia de habilidad
         if(!this.iterator.hasNext()) {
             this.iterator = skills.iterator();
         }

@@ -25,7 +25,6 @@ public class PathBox {
         return monster;
     }
 
-    //TODO: cambiar
     public void setMonster(Monster monster) {
         this.monster = monster;
     }
@@ -66,13 +65,12 @@ public class PathBox {
             buttonUI.setIcon(monster.getImage());
             buttonUI.setPreferredSize(new Dimension(80, 85));
             buttonUI.setVisible(true);
+
             this.healthBar.setForeground(Color.BLACK);
             JLabel lifeString = new JLabel(String.valueOf(monster.getLife()));
             this.healthBar.setString(lifeString.getText());
-//            this.healthBar.setBorder(BorderFactory.createLineBorder(Color.BLACK, 1));
             this.healthBar.setMaximum(monster.getMaxLife());
             this.healthBar.setValue(monster.getLife());
-            //this.healthBar.setString(String.valueOf(monster.getLife()));
             this.healthBar.setStringPainted(true);
             if (monster.getPlayer().getId().equals(1L)) {
                 this.healthBar.setForeground(new Color(123, 179, 252));

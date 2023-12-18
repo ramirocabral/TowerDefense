@@ -34,7 +34,6 @@ public class SegundaEvaluacionUI extends JFrame {
         return this;
     }
 
-   //retorna el boton de la lista DE BOTONES, no de paneles
     public JLabel getButton(int index) {
         return buttons.get(index);
     }
@@ -44,7 +43,7 @@ public class SegundaEvaluacionUI extends JFrame {
     }
 
     /*
-     Inicializa los espacios para las imagenes de los monsturos en el tablero
+     Inicializa los espacios para las imagenes de los monsturos en el tablero, y las barras de vida
     * */
     private void addButtons() {
 
@@ -103,7 +102,6 @@ public class SegundaEvaluacionUI extends JFrame {
         panelList.get(6).add(healthBar6);
         healthBar6.setVisible(false);
         healthBars.add(healthBar6);
-
 
         //button 8
         JLabel button8 = new JLabel();

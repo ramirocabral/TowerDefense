@@ -1,10 +1,11 @@
 package entregable.ataques.Fire;
 
 import entregable.ataques.Multipliers;
+import game.attacks.Fire;
 import game.components.Monster;
 import game.random.RandomGenerator;
 
-public class FireBall implements Fire{
+public class FireBall implements Fire {
     @Override
     public int damage(Monster monster) {
         int damage = RandomGenerator.getInstance().calculateDamage(90, 250);

@@ -1,19 +1,14 @@
 package entregable.monstruos;
 
 import entregable.ataques.Electric.Discharge;
-import entregable.ataques.Electric.Electric;
 import entregable.ataques.Electric.Thunderstrike;
-import entregable.ataques.Electric.WattCharge;
 import game.attacks.Attack;
 import game.components.Monster;
-import game.components.PathBox;
 import game.random.RandomGenerator;
 import game.types.Type;
 
 import javax.swing.*;
-import javax.swing.text.html.HTMLDocument;
 import java.util.Arrays;
-import java.util.Iterator;
 import java.util.List;
 
 /*
@@ -40,7 +35,7 @@ public class ElectroBOOM extends Monster{
     public void attack(Monster enemy) {
         int damage;
         if(this.life < 200 && this.life > 0) {
-            heal();
+            WattCharge();
         }
         damage = this.activeSkill.damage(enemy);
         System.out.println("--     [" + this + "] ataca a [" + enemy + "] con "+this.activeSkill.getClass()+"haciendole " + damage + " de daño");
@@ -53,7 +48,7 @@ public class ElectroBOOM extends Monster{
         }
     }
 
-    public void heal(){
+    private void WattCharge(){
         int increase =  RandomGenerator.getInstance().calculateDamage(50,100);
         this.life = this.life + increase;
         System.out.println("[ElectroBoom] se cura " + increase + " de vida");
